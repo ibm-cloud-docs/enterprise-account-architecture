@@ -1,0 +1,35 @@
+---
+toc:
+  properties:
+    subcollection: enterprise-account-architecture
+    authors:
+        - name: Arn Hyndman
+          url: https://www.linkedin.com/in/arnhyndman/
+    audience: solution
+    content-type: white-paper
+    href: /docs/enterprise-account-architecture
+    path: enterprise-account-architecture
+    description: A generalized recommendation for how large customers should configure and govern IBM Cloud at scale.
+    label: Enterprise account architecture
+
+  entries:
+  - navgroup:
+      id: overview
+      topics:
+      - index.md
+      - enterprise-requirements.md
+      - volumetric-analysis.md
+      - principles.md
+
+  - navgroup:
+      id: plan
+      topics:
+        - account-structure.md
+        - scc-account-structure.md
+        - admin-account.md
+        - hub-account.md
+        - bu-account.md
+        - workload-account.md
+        - iac-accounts.md
+        - finops.md
+

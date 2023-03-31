@@ -1,0 +1,32 @@
+{
+  "title": "Enterprise account architecture",
+  "lastupdated": "2023-03-30",
+  "introduction": "This document captures a generalized recommendation for how large customers should configure and govern IBM Cloud at scale.",
+  "section_diagram": {
+    "description": "Volumetric Analysis: How basic account structure scales to required number of applications.",
+    "diagram": "images/volume.svg",
+    "caption": "Volumetric analysis diagram"
+  },
+  "section_video": {
+    "description": "Learn about enterprise accounts.",
+    "href": "https://video.ibm.com/embed/recorded/128825312",
+    "script": "/docs/secure-enterprise?topic=secure-enterprise-what-is-enterprise#watch-and-learn"
+  },
+  "section_training": [
+    {
+      "title": "IBM Cloud Professional Architect",
+      "description": "Gain the skills and knowledge required to begin a career as an IBM Cloud Professional Architect.",
+      "href": "https://www.ibm.com/training/path/ibmcloudprofessionalarchitect"
+    },
+    {
+      "title": "IBM Cloud Advanced Architect Concepts",
+      "description": "This badge earner has gained in-depth knowledge of scaling servers and databases, implementing application architecture, using compute options in solutions, designing environments for multicloud deployments, designing resilient solutions and applications, designing for RTO and RPO, disaster recovery, and designing highly available cloud solutions.",
+      "href": "https://www.ibm.com/training/badge/ibm-cloud-advanced-architect-concepts"
+    },
+    {
+      "title": "Getting Started with Cloud for the Enterprise",
+      "description": "This badge earner has demonstrated knowledge and understanding of the foundations of cloud for the enterprise including: Consumer applications, Enterprise adoption, Delivery models and Industry Cloud Adoption.",
+      "href": "https://www.ibm.com/training/badge/getting-started-with-cloud-for-the-enterprise.2"
+    }
+  ]
+}
