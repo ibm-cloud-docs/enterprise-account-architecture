@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-03-29"
+lastupdated: "2023-04-05"
 
 subcollection: enterprise-account-architecture
 
@@ -20,10 +20,10 @@ Large enterprises that allow an account structure, cross account networking, res
 
 This recommendation extends and compliments the account and resource level guidance that is found in the [IBM Cloud Framework for Financial Services](/docs/framework-financial-services?topic=framework-financial-services-about) and other IBM Cloud best practices such as:
 
-- [Cloud best practices for IT executives](https://www.ibm.com/downloads/cas/NYWPPW6K)
-- [Best practices for setting up an enterprise](https://cloud.ibm.com/docs/account?topic=account-enterprise-best-practices)
-- [Best practices for organizing resources and assigning access](https://cloud.ibm.com/docs/account?topic=account-account_setup)
-- [Best practices for organizing users, teams, and applications](https://cloud.ibm.com/docs/solution-tutorials?topic=solution-tutorials-users-teams-applications)
-- [Best practices for working with Security and Compliance Center](https://cloud.ibm.com/docs/security-compliance?topic=security-compliance-best-practices)
-- [Best practices for billing and usage](https://cloud.ibm.com/docs/billing-usage?topic=billing-usage-best-practices)
-- [Advanced networking for IBM Cloud VPC](https://www.ibm.com/cloud/architecture/content/course/advanced-networking-for-vpc)
+- [Cloud best practices for IT executives](https://www.ibm.com/downloads/cas/NYWPPW6K){: external}
+- [Best practices for setting up an enterprise](/docs/account?topic=account-enterprise-best-practices)
+- [Best practices for organizing resources and assigning access](/docs/account?topic=account-account_setup)
+- [Best practices for organizing users, teams, and applications](/docs/solution-tutorials?topic=solution-tutorials-users-teams-applications)
+- [Best practices for working with Security and Compliance Center](/docs/security-compliance?topic=security-compliance-best-practices)
+- [Best practices for billing and usage](/docs/billing-usage?topic=billing-usage-best-practices)
+- [Advanced networking for IBM Cloud VPC](https://www.ibm.com/cloud/architecture/content/course/advanced-networking-for-vpc){: external}

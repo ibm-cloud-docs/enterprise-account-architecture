@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-03-29"
+lastupdated: "2023-04-05"
 
 subcollection: enterprise-account-architecture
 
@@ -49,7 +49,7 @@ There are some limitations to using multiple enterprises, for example subscripti
 ## User Access
 {: #user-access}
 
-In general, users should not be directly provisioned within this account structure. Instead, use [Federated identities](/docs/account?topic=account-federated_id&interface=ui) in combination with [trusted profiles](/docs/account?topic=account-create-trusted-profile&interface=ui) or [dynamic access groups](https://cloud.ibm.com/docs/account?topic=account-rules&interface=ui) to grant access permissions in accounts as required.
+In general, users should not be directly provisioned within this account structure. Instead, use [Federated identities](/docs/account?topic=account-federated_id) in combination with [trusted profiles](/docs/account?topic=account-create-trusted-profile) or [dynamic access groups](/docs/account?topic=account-rules) to grant access permissions in accounts as required.
 
 ## Scaling down
 {: #scaling-down}
