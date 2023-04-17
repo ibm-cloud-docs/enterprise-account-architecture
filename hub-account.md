@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-03-29"
+lastupdated: "2023-04-17"
 
 subcollection: enterprise-account-architecture
 
@@ -25,7 +25,7 @@ A network and services hub account is created in both development and production
 | Component | Quantity | Description |
 |-----------|--------------|----|
 | Transit Gateway | 1 | Provides network connectivity across all VPCs in the enterprise |
-| Direct Link | 1 | Connects the enterprise to the corporate network |
+| Direct Link | 1-4 | Connects the enterprise to the corporate network. Use up to four instances if maximum redundancy is required. |
 | Hyper Protect Crypto Services | 1-2 | Provides key management services to applications across the enterprise. Requires a service-to-service policy for each application. |
 | VPE - VPC | 1 | Provides private networking for IBM Cloud services. VPEs are provisioned in this VPC for all IBM Cloud services that are used in the enterprise. A custom DNS resolver enables DNS resolution for the VPEs. |
 | Shared customer applications | n | Customer applications that must be centralized can be deployed here |

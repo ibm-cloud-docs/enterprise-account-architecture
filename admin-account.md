@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-03-29"
+lastupdated: "2023-04-17"
 
 subcollection: enterprise-account-architecture
 
@@ -24,7 +24,7 @@ The central administration account contains a catalog of deployable architecture
 | Component | Quantity | Description |
 |-----------|--------------|----|
 | Security and Compliance Project | 1 |  Manages the infrastructure as code for deploying the Security and Compliance Center and its dependencies in the root account |
-| Hub project | 1 | Manages the infrastructure as code for deploying centralized networking and other common services into the central administration account |
+| Network and services project | 1 | Manages the infrastructure as code for deploying centralized networking and other common services into the central administration account |
 | Business unit project | 1-25 | Manages the infrastructure as code for deploying a business unit account group, the business unit administration account, and the BU administration account contents |
 | Private catalog | 1 | Used to host the approved deployable architectures for the projects in this account |
 | Schematics agent | n (1+ per BU) | Used enable privately hosted custom deployable architectures in the private catalog |

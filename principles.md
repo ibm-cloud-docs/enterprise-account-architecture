@@ -118,5 +118,5 @@ Examples of such quotas and limits include:
 
 - [VPC quotas and limits](/docs/vpc?topic=vpc-quotas)
 - [IAM limits](/docs/account?topic=account-known-issues#iam_limits)
-- [Enterprise account limits](/docs/account?topic=account-what-is-enterprise#enterprise-hierarchy)
+- [Enterprise account limits](/docs/secure-enterprise?topic=secure-enterprise-what-is-enterprise#enterprise-hierarchy)
 - [Transit Gateway limits](/docs/transit-gateway?topic=transit-gateway-helpful-tips#service-limits)
