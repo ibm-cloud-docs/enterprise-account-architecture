@@ -1,6 +1,6 @@
 {
   "title": "Enterprise account architecture",
-  "lastupdated": "2023-03-30",
+  "lastupdated": "2023-06-29",
   "introduction": "This document captures a generalized recommendation for how large customers should configure and govern IBM Cloud at scale.",
   "section_diagram": {
     "description": "Volumetric Analysis: How basic account structure scales to required number of applications.",
