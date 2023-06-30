@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-04-05"
+lastupdated: "2023-06-29"
 
 subcollection: enterprise-account-architecture
 
@@ -31,8 +31,8 @@ The following shows each type of account and its purpose:
 | [Business unit administration](/docs/enterprise-account-architecture?topic=enterprise-account-architecture-bu-admin-account)     | 1-25 | Production BU account groups | Hosts infrastructure as code to manage workload accounts and the workload account's applications and infrastructure |
 | [Workload](/docs/enterprise-account-architecture?topic=enterprise-account-architecture-infra-account)     | 2-500 | Development and production BU account groups| Hosts shared infrastructure for hosting application workloads. Used in development - production pairs |
 | [Infrastructure as code development and test](/docs/enterprise-account-architecture?topic=enterprise-account-architecture-iac-account)      | 1+1 | Development BU account groups | 1 Account to host cloud tools for infrastructure as code development and 1 for test deployments |
+| [Backup](/docs/enterprise-account-architecture?topic=enterprise-account-architecture-dr)      | 3-51 | Store backup and DR data | 1 for the Admin Account Group + 2 per BU (1 dev and 1 prod) |
 {: caption="Table 1. Account purpose" caption-side="bottom"}
-
 
 ## Rationale for separate development and production enterprises
 {: #rationale-separate-enterprise }

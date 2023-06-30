@@ -32,4 +32,4 @@ toc:
         - workload-account.md
         - iac-accounts.md
         - finops.md
-
+        - disaster-recovery.md

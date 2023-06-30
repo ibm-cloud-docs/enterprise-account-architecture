@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-03-29"
+lastupdated: "2023-06-29"
 
 subcollection: enterprise-account-architecture
 
@@ -24,26 +24,67 @@ Self-administration is constrained to the capabilities of the deployable archite
 
 Deployable architectures in the infrastructure catalog enable workload accounts to be created and provisioned with the shared infrastructure needed to host applications in a secure and compliant manner.
 
+| Component | Quantity | Description |
+|-----------|--------------|----|
+| Application catalog | 1 | Used to host the approved deployable architectures for the application projects in this BU |
+| Infrastructure catalog | 1 | Used to host the approved deployable architectures for the shared infrastructures projects in this BU |
+| Application development project | n | Manages the infrastructure as code for deploying application development resources such as Git repos, toolchains, container registries, evidence lockers and also requests namespaces, network egress rules, and so on within the shared infrastructure. The applications themselves are built and then deployed onto dev and prod shared infrastructure by using these tools |
+| Shared infrastructure project | n | Manages the infrastructure as code for deploying dev and prod workload accounts and the shared infrastructure within those accounts |
+| IaC Dev Project | 1 | Manages the infrastructure as code for deploying dev and test IaC accounts.  These accounts are used for developing and testing deployable architectures |
+| Application - Infrastructure Sets | n | Conceptual grouping - groups a set of application projects and the project that deploys the infrastructure to host those applications |
+{: caption="Table 1. Components" caption-side="bottom"}
+
 ![BU Admin service diagram. All of the information is conveyed in the surrounding text.](images/bu-hub-2.svg){: caption="Figure 2. BU administration account services" caption-side="bottom"}
 
 Supporting the infrastructure as code elements in the BU administration account are Schematics workspaces and the Schematics agent. Schematics enables the use of deployable architectures that are stored in private Git repos that are hosted on the corporate network. This account also hosts the management and edge VPCs used in the VPC landing zone reference architecture if required by the BU.
 
 | Component | Quantity | Description |
 |-----------|--------------|----|
-| App development project | n | Manages the infrastructure as code for deploying application development resources such as Git repos, toolchains, container registries, evidence lockers. The applications themselves are built and then deployed onto shared infrastructure by using these tools |
-| Shared infrastructure project | n | Manages the infrastructure as code for deploying workload accounts and the shared infrastructure within those accounts |
-| App catalog | 1 | Used to host the approved deployable architectures for the app projects in this account |
-| Infrastructure catalog | 1 | Used to host the approved deployable architectures for the shared infrastructures projects in this account |
 | Schematics agent | 1 | Used to enable privately hosted custom deployable architectures in the private catalog |
 | Schematics workspaces | n | Orchestrated by projects, used to deploy the deployable architectures, and store the terraform state. One workspace per configuration within each project. |
 | Management/Edge VPC | 1 | Hosts the shared management and edge resources for the business unit. This can include public load balancers, bastion hosts, and custom management services. |
-{: caption="Table 1. Components" caption-side="bottom"}
+{: caption="Table 2. Components" caption-side="bottom"}
 
+The schematics agent can be deployed in the Management/Edge VPC, but the agent should not be accessible from the public internet.
+
+
+Additional Components not shown in the diagram:
+
+| Component | Quantity | Description |
+|-----------|--------------|----|
+| Activity Tracker | 1 | Provides an audit trail for activity within the account |
+| IBM Cloud Logging | 1 | Provides log monitoring for the infrastructure hosting the Schematics Agent |
+| IBM Cloud Monitoring | 1 | Provides performance and error monitoring for the Schematics Agent |
+| Event Notifications | 1 | Provides notifications for Projects |
+| Automation trusted profile | 1 | Authorizes the central administration project to manage the infrastructure in this account |
+| Access groups and trusted profiles | n | A number of access groups and trusted profiles that are used to authorize BU operators to use catalogs and projects |
+{: caption="Table 3. Additional components" caption-side="bottom"}
+
+## Management / Edge VPC
+{: #management-edge-vpc}
+
+The Financial Services Cloud reference architecture separates management and public internet access functions from the application hosting functions - see the [VPC reference architecture for IBM Cloud for Financial Services](/docs/framework-financial-services?topic=framework-financial-services-vpc-architecture-about) and the [Variation with edge or transit VPC for public internet access](/docs/framework-financial-services?topic=framework-financial-services-vpc-architecture-about#edge-vpc-architecture). These management and edge functions are centralized into the BU administration account to reduce cost and ease management and control.
 
 ## Authorization
 {: #authorization}
 
-Rather than authorizing users to deploy infrastructure as code directly, authorize [IBM Cloud project](/docs/secure-enterprise?topic=secure-enterprise-understanding-projects) instances within the business unit administration account to deploy resources and create child accounts. Authorizing projects to deploy only resources and create child accounts ensures that changes to the business unit infrastructure can be made only through IBM Cloud projects. These changes are thus subject to the governance provided by catalog onboarding and project configuration management. This helps implement the zero trust security best practices that are required by many compliance programs, including [Financial Services Cloud](/docs/framework-financial-services?topic=framework-financial-services-best-practices#best-practices-zero-trust).
+Rather than authorizing BU account users to deploy infrastructure as code directly, authorize [IBM Cloud project](/docs/secure-enterprise?topic=secure-enterprise-understanding-projects) instances within the business unit administration account to deploy resources and create child accounts. As projects deploy only approved architectures from the catalog, this ensures changes to workload accounts are subject to the governance provided by catalog onboarding and project configuration management.
+
+This authorization model helps implement the zero trust security best practices that are required by many compliance programs, including [Financial Services Cloud](/docs/framework-financial-services?topic=framework-financial-services-best-practices#best-practices-zero-trust).
+
+Users should not be granted privileges to modify resources in the workload accounts.
+{: note}
+
+As is [best practice](/docs/account?topic=account-account_setup#how_access), users should be granted access to projects, catalogs, and observability tools within the account through access groups, trusted profiles, or both. An additional level of security can be obtained by ensuring that users normally do not have access to deploy changes to production. Users needing production deployment privileges must switch to a production trusted profile (which has privileges to deploy to production through projects), greatly reducing opportunity for mistakes that can affect production. Production trusted profiles should be configured with a short session duration and with privileges only for production deployments, eliminating the possibility that users will simply use this profile all the time.
+
+### Additional Considerations
+{: #additional-considerations}
+
+Given that projects within the BU admin account will have access to both development and production artifacts, a concern is that experimental changes or development artifacts might inadvertently be deployed to production.
+
+This concern can be mitigated by using a naming convention where accounts, trusted profiles, configurations, and key resources are named with an environment prefix or suffix. The naming convention makes it possible to see at a glance what resources are being proposed to deploy where during configuration and during the project approval flow.
+
+In addition, fine grained access control to configurations within a project can be used to restrict the set of users are allowed to approve and deploy changes to production infrastructure.
 
 ## Rationale for centralized infrastructure as code management
 {: #rational-central-iac}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-04-17"
+lastupdated: "2023-06-29"
 
 subcollection: enterprise-account-architecture
 
@@ -15,7 +15,7 @@ keywords:
 # Central administration account
 {: #admin-hub-account}
 
-This administrative account centralizes the management of the deployable architectures that are needed to provision the enterprise account structure, the Security and Compliance Center, and the tools account across both development and production. The central administration account is used to bootstrap the remainder of the enterprise account structure.
+This administrative account centralizes the management of the deployable architectures that are needed to provision the enterprise account structure, the Security and Compliance Center, and the tools account across both development and production.
 
 ![Central administration diagram. All of the information is conveyed in the surrounding text](images/admin-hub.svg){: caption="Figure 1. Central administration account" caption-side="bottom"}
 
@@ -24,20 +24,32 @@ The central administration account contains a catalog of deployable architecture
 | Component | Quantity | Description |
 |-----------|--------------|----|
 | Security and Compliance Project | 1 |  Manages the infrastructure as code for deploying the Security and Compliance Center and its dependencies in the root account |
-| Network and services project | 1 | Manages the infrastructure as code for deploying centralized networking and other common services into the central administration account |
-| Business unit project | 1-25 | Manages the infrastructure as code for deploying a business unit account group, the business unit administration account, and the BU administration account contents |
+| Network and Services project | 1 | Manages the infrastructure as code for deploying centralized networking and other common services into the central administration account |
+| Business unit project | 1-25 | Manages the infrastructure as code for deploying a business unit account group, a backup account, the business unit administration account, and the BU administration account contents |
+| Central administration project | 1 | Manages the infrastructure as code for deploying the resources in the central administration account, creating and configuring the administration backup account |
 | Private catalog | 1 | Used to host the approved deployable architectures for the projects in this account |
-| Schematics agent | n (1+ per BU) | Used enable privately hosted custom deployable architectures in the private catalog |
-| Centralized administration access groups | 1-5 | Used to provide access policies to the centralized DevOps team that manages this account |
+| Schematics agent | 1 | Used enable privately hosted custom deployable architectures in the private catalog for this account |
 {: caption="Table 1. Components" caption-side="bottom"}
 
 The schematics agent, catalog, projects, and schematics workspaces must co-reside in a single account.
 {: important}
 
-## Administration authorization
+Additional Components not shown in the diagram:
+
+| Component | Quantity | Description |
+|-----------|--------------|----|
+| Activity Tracker | 1 | Provides an audit trail for activity within the account |
+| IBM Cloud Logging | 1 | Provides log monitoring for the infrastructure hosting the Schematics Agent |
+| IBM Cloud Monitoring | 1 | Provides performance and error monitoring for the Schematics Agent |
+| Event Notifications | 1 | Provides notifications for Projects |
+{: caption="Table 2. Additional components" caption-side="bottom"}
+
+## Authorization
 {: #admin-auth}
 
-Rather than authorizing users to deploy infrastructure as code directly, authorize project instances within the administration account to deploy resources and create child accounts. Authorizing projects to deploy resources and create child accounts ensures that only changes to the enterprise account structure and key shared infrastructure can be made through projects. Projects are thus subject to the governance provided by catalog onboarding and project configuration management. This helps implement the zero trust security best practice that is required by many compliance programs, including [Financial Services Cloud](/docs/framework-financial-services?topic=framework-financial-services-best-practices#best-practices-zero-trust).
+Rather than authorizing users to deploy infrastructure as code directly, authorize project instances within the central administration account to deploy resources and create child accounts. Authorizing projects to deploy resources and create child accounts ensures that only changes to the enterprise account structure and key shared infrastructure can be made through projects. As projects are subject to the governance provided by catalog onboarding and project configuration management, this helps implement the zero trust security best practice that is required by many compliance programs, including [Financial Services Cloud](/docs/framework-financial-services?topic=framework-financial-services-best-practices#best-practices-zero-trust).
+
+User access to the projects and resources within the Central Administration account is best performed with Access Groups or Trusted Profiles. This keeps the number of policies low, making it easier to reason about access permissions and reducing opportunity for error.  A typical organization should be able operate their central administration account with on the order of 10 access groups or trusted profiles.
 
 ## Rationale for centralized management across development and production
 {: #rationale-for-central-proj}
@@ -49,3 +61,18 @@ Centralizing management of deployable architectures and their configuration into
 - Centralized access control and monitoring for key Enterprise infrastructure. Placing the catalogs and projects in a centralized account means that only a single set of access policies must be audited to ensure the correct (limited) set of users have access to manipulate this infrastructure.
 - Use of projects with trusted profiles also ensures that credentials with the capability to manipulate this fundamental configuration are not directly accessible to users and thus cannot be misused.  Projects also ensure configuration governance, making it impossible for a single individual to modify key infrastructure.
 - Only one schematics agent is needed.
+
+
+## Bootstrapping the central administration account
+{: #bootstrap-central-admin-account}
+
+As Central Administration account is responsible for laying down majority of the enterprise account architecture, the enterprise accounts with IBM Cloud and the Central Administration account must be created first.
+
+Steps to bootstrap the Central Administration Account:
+
+1. Manually create a development and production enterprise based on two freshly created subscription accounts ([docs](/docs/secure-enterprise?topic=secure-enterprise-create-enterprise&interface=ui)).
+2. Manually create a child account for centralized administration in the production enterprise ([docs](/docs/secure-enterprise?topic=secure-enterprise-enterprise-add&interface=ui#create-accounts))
+3. Onboard deployable architectures for the network and services account and for the central administration account to a private catalog ([docs](/docs/secure-enterprise?topic=secure-enterprise-manifest)). The deployable architecture source can be stored in a private git repo accessible over the public network during the bootstrap procedure.
+4. Deploy the network and services account through a project ([docs](/docs/secure-enterprise?topic=secure-enterprise-setup-project)). This includes setting up direct link to provide connectivity to on premises networking.
+5. Populate the central administration account through a project. This includes provisioning the schematics agent to enable access to private git repos stored on premises.
+6. (optional) Update the private catalog entries for previously onboarded deployable architectures to point to a git repo on the private network.

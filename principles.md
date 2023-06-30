@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-03-29"
+lastupdated: "2023-04-10"
 
 subcollection: enterprise-account-architecture
 
@@ -33,7 +33,7 @@ A key part of this recommendation is to do all cloud setup and configuration as 
 
 Managing infrastructure as code at scale requires more than just Terraform in a Git repo. Infrastructure as code is the DNA of an enterprise-wide cloud solution because it must be subject to both governance and management. Infrastructure as code ensures that only validated, compliant, and approved code is deployed. You can also track how deployments correspond to internal projects, teams, cost centers, and more.
 
-IBM Cloud provides a number of tools to assist with this process. The IBM Cloud catalog allows an enterprise to advertise approved IaC solutions to users across the cloud. [IBM Cloud Project's](/docs/secure-enterprise?topic=secure-enterprise-understanding-projects) allow an enterprise to ensure that only approved IaC is deployed and to track how the resulting resources correspond to projects, teams, and cost centers.
+IBM Cloud provides a number of tools to assist with this process. The IBM Cloud catalog allows an enterprise to advertise approved IaC solutions to users across the cloud. [IBM Cloud projects](/docs/secure-enterprise?topic=secure-enterprise-understanding-projects) allow an enterprise to ensure that only approved IaC is deployed and to track how the resulting resources correspond to projects, teams, and cost centers.
 
 ### Related controls in IBM Cloud Framework for Financial Services
 {: #iac-controls}

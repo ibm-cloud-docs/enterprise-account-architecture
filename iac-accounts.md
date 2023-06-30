@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-03-30"
+lastupdated: "2023-06-29"
 
 subcollection: enterprise-account-architecture
 
@@ -21,8 +21,6 @@ In addition to consuming existing infrastructure as code to create hub and workl
 
 One account is used for infrastructure as code development. This account contains infrastructure as code development tools such as toolchains, Git repos, and catalogs of infrastructure as code modules for use in development. It also includes a test catalog where test versions of the infrastructure as code are published to be used in a test project.
 
-A second account is used for test deployments of the new infrastructure as code versions.
-
 | Component | Quantity | Description |
 |-----------|--------------|----|
 | Development catalog | 1 | Used to host the approved deployable architectures for the infrastructure as code development projects in this account |
@@ -30,9 +28,16 @@ A second account is used for test deployments of the new infrastructure as code 
 | Infrastructure as code development project | n | Manages the infrastructure as code for deploying infrastructure as code development resources such as Git repos, toolchains, container registries, and evidence lockers. The terraform is then published into a test catalog for deployment testing. The project also contains a configuration that deploys the infrastructure as code into the test account from the test catalog. |
 | Development resource group | n | Contains the infrastructure as code development resources such as Git repos, toolchains, container registries, and evidence lockers for a single infrastructure as code development project |
 | Schematics agent | 1 | Used enable privately hosted custom deployable architectures in the private catalog |
-| Schematics workspaces | n | Orchestrated by projects, used to deploy the deployable architecturesand store terraform state. One workspace per configuration within each project. |
+| Schematics workspaces | n | Orchestrated by projects, used to deploy the deployable architectures and store terraform state. One workspace per configuration within each project. |
+{: caption="Table 1. IaC Tools Components" caption-side="bottom"}
+
+A second account is used for test deployments of the new infrastructure as code versions.
+
+
+| Component | Quantity | Description |
+|-----------|--------------|----|
 | Workload VPC | n | An example of what might be deployed for test by the infrastructure as code under development |
 | Infrastructure as code trusted profile | n | Authorizes management of this account by an infrastructure as code development project |
-| Infrastructure as code dev access group | n | Access group to enable infrastructure as code devs to do development and test deployments |
-| Infrastructure as code access group | n | Access groups to enable infrastructure as code development teams to test the deployed infrastructure as code |
-{: caption="Table 1. Components" caption-side="bottom"}
+| Test resource group | n | A resource group in which to deploy test resources for each cleanup
+| Infrastructure as code access group | n | Access groups to enable infrastructure as code development teams to test the deployed infrastructure as code. Provides access to a test resource group (or groups if required by the DA). |
+{: caption="Table 2. IaC Test Components" caption-side="bottom"}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-03-30"
+lastupdated: "2023-06-29"
 
 subcollection: enterprise-account-architecture
 
@@ -12,23 +12,28 @@ keywords:
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Financial operations
+# Cloud financal management
 {: #finops}
 
-Financial operations for cloud is about identifying unmanaged resources, allocating costs accurately, and minimizing resource over-provisioning.
+Cloud financial management is the cultural practice of extracting more value out of cloud resources by holding teams within your enterprise accountable for their cloud costs rather than being managed at the account level by the finance department.
 {: shortdesc}
 
-## Identifying unmanaged resources
-{: #identify-unmanaged-resources}
+Enabling teams to regularly monitor their cloud spend helps teams drive business decisions that improve infrastructure efficiency. These best practices are intended to help start and mature your enterprise's [finops capabilities](https://www.finops.org/framework/capabilities/).
 
-Cloud as code and IBM Cloud projects are used to ensure that all resources within the enterprise are tagged with the appropriate project. The Security and Compliance Center can be used to scan for untagged resources, indicating manually provisioned resources. Any untagged resources that are found indicate a gap in an access control policy and improper configuration management that should trigger a root cause analysis.
+## Cost allocation
+{: #cost-allocation}
 
-## Allocating costs
-{: #allocate-costs}
+Projects have built in resource tagging mechanics that ensure all resources within the enterprise are tagged with appropriate project tags. When combined with {{site.data.keyword.cloud_notm}} usage reporting by tag, enterprises can rollup all your cloud costs across many {{site.data.keyword.cloud_notm}} accounts to your project teams.
 
-Given the robust tagging mechanisms through cloud as code and IBM Cloud usage reporting by tag, all costs can be allocated to a project. Allocating costs to a project provides a higher level, more granular unit of cost allocation that eases the job of associating costs with organizational units, cost centers, and so on. These cost allocations can be accomplished by further tagging projects and by using the project account and account group information. From here, chargebacks and showbacks can readily be accomplished. Futhermore, within a project, it is easy to allocate costs between R&D and Cost of Goods accounting categories that use the enterprise separation between nonproduction and production.
+Further cost allocations can be accomplished by tagging projects rather than individual cloud resources and allocating costs to organizational units or cost centers. From here, chargebacks and showbacks can readily be accomplished.
 
-## Minimizing resource over-provisioning
-{: #minimize-resource-over-provisioning}
+By using enterprise separation between nonproduction and production environments, project costs can be allocated between R&D and Cost of Goods accounting categories.
 
-This recommendation creates a framework for using shared resources and shared application hosting infrastructure. Shared resources and application hosting infrastructure is an essential ingredient to enable efficient use of infrastructure and allow minimum over-provisioning. Further, the IBM Cloud tools that are included in many of the IBM supplied deployable architectures provide robust tooling for monitoring resource usage, and thus support capacity planning and infrastructure right-sizing. An example of one of these tools is IBM Cloud Monitoring.
+Because of the way projects tag resources, deallocated resource costs can be identified by using the Security and Compliance Center by scanning for untagged resources, indicating manually provisioned resources. Any untagged resources that are found indicate a gap in an access control policy and improper configuration management that should trigger a root cause analysis.
+
+## Resource utilization and efficiency
+{: #resource-utilization-and-efficiency}
+
+{{site.data.keyword.cloud_notm}} monitoring can be used to monitor resource utilization across your various compute instances by allowing your enterprise to identify infrastructure right-sizing opportunities or to assess whether the performance, availability, or other quality metrics are of value for the expense incurred.
+
+Centralizing monitoring can also be used to identify infrastructure consolidation opportunities where multiple applications can be on bare minimum hardware yet struggle to efficiently use the resources available. Consolidating the hosting of many small applications can minimize over-provisioning and improve availability through added redundancy.

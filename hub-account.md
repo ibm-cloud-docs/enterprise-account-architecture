@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-04-17"
+lastupdated: "2023-06-29"
 
 subcollection: enterprise-account-architecture
 
@@ -25,8 +25,8 @@ A network and services hub account is created in both development and production
 | Component | Quantity | Description |
 |-----------|--------------|----|
 | Transit Gateway | 1 | Provides network connectivity across all VPCs in the enterprise |
-| Direct Link | 1-4 | Connects the enterprise to the corporate network. Use up to four instances if maximum redundancy is required. |
-| Hyper Protect Crypto Services | 1-2 | Provides key management services to applications across the enterprise. Requires a service-to-service policy for each application. |
+| Direct Link | 1-4 | Connects the enterprise to the corporate network. Up to 4 instances used if maximum redundancy required |
+| Hyper Protect Crypto Services | 1-2 | Provides key management services to applications across the enterprise. Requires a service-to-service policy for each application. 2 instances required only if scale demands. |
 | VPE - VPC | 1 | Provides private networking for IBM Cloud services. VPEs are provisioned in this VPC for all IBM Cloud services that are used in the enterprise. A custom DNS resolver enables DNS resolution for the VPEs. |
 | Shared customer applications | n | Customer applications that must be centralized can be deployed here |
 | Trusted profile | 1 | Authorizes management of this account by a project in the central administration account |
@@ -56,4 +56,4 @@ A firewall might be deployed in this account or within the corporate network to 
 Virtual Private Endpoints (VPE) for shared IBM Cloud services are configured within a VPC in the network and services hub account as VPEs might be attached at only one point in the flat address space. This VPC also includes a custom DNS resolver to ensure the centralized VPEs are properly DNS resolved from all VPCs in the environment.
 
 Some details on how VPEs should be centralized are still being worked out.  This document will be updated when that information is available.
-{: warning}
+{: note}
