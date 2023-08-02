@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-06-29"
+lastupdated: "2023-08-02"
 
 subcollection: enterprise-account-architecture
 
@@ -80,11 +80,12 @@ As is [best practice](/docs/account?topic=account-account_setup#how_access), use
 ### Additional Considerations
 {: #additional-considerations}
 
-Given that projects within the BU admin account will have access to both development and production artifacts, a concern is that experimental changes or development artifacts might inadvertently be deployed to production.
+
+Given that projects within the BU admin account will have access to both nonproduction and production artifacts, a concern is that experimental changes or nonproduction artifacts may inadvertently be deployed to production.
 
 This concern can be mitigated by using a naming convention where accounts, trusted profiles, configurations, and key resources are named with an environment prefix or suffix. The naming convention makes it possible to see at a glance what resources are being proposed to deploy where during configuration and during the project approval flow.
 
-In addition, fine grained access control to configurations within a project can be used to restrict the set of users are allowed to approve and deploy changes to production infrastructure.
+In addition, fine grained access control to configurations within a project can be used to restrict the set of users are allowed to approve and deploy changes to production infrastructure. Use of a separate trusted profile for production deployments only can greatly reduce the chance of accidental changes to production.
 
 ## Rationale for centralized infrastructure as code management
 {: #rational-central-iac}
@@ -99,9 +100,9 @@ Centralizing management of deployable architectures and their configuration into
 
    Placing the catalogs and projects in a centralized account makes it easier to ensure the principle of least privilege is applied. Use of projects also ensures that credentials with the capability to manipulate applications and infrastructure are not accessible to users and thus cannot be misused. Finally, keeping these related projects in the BU account makes it easy to monitor deployments and ensure that the infrastructure is up to date and compliant.
 
-- Ensures that development and production are aligned
+- Ensures that development, test, and production are aligned
 
-   Using a single project across development and production makes it possible to align development and test environments with production environments. The single project helps reduce the chance of defects that are related to environmental differences while providing control to the team over testing new deployable architecture versions in different environments. It also ensures that the lifecycle of these resources is properly managed across all environments. For example, if a project is no longer needed, it is easy to clean up all resources across nonproduction and production environments.
+   Using a single project across nonproduction and production makes it possible to align development and test environments with production environments. The single project helps reduce the chance of defects that are related to environmental differences while providing control to the team over testing new deployable architecture versions in different environments. It also ensures that the lifecycle of these resources is properly managed across all environments. For example, if a project is no longer needed, it is easy to clean up all resources across nonproduction and production environments.
 
 - Allows all project resources to be tracked for accounting and configuration management
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-06-29"
+lastupdated: "2023-07-27"
 
 subcollection: enterprise-account-architecture
 
@@ -21,16 +21,16 @@ The workload accounts contain the shared application hosting infrastructure, inc
 ![Prod workload diagram. All of the information is conveyed in the surrounding text.](images/prod-workload.svg){: caption="Figure 1. Production workload account" caption-side="bottom"}
 
 
-A single workload account contains a single VPC with one or more subnets, but a single address prefix. Limiting the number of VPCs and address prefixes is required to ensure that the transit gateway routing table size stays within limits as we scale the number of workload accounts.
+A single workload account contains a single VPC with one or more subnets. It is necessary to limit the number of VPCs and address prefixes to ensure that the transit gateway routing table size stays within limits as we scale the number of workload accounts (for more information, see [VPC addressing](/docs/solution-tutorials?topic=solution-tutorials-vpc-transit1#vpc-transit-ip-address-and-subnet-layout)).
 
-Users in this account should not have access to modify resources as all resource configuration is performed as code from the BU administration account. In general, the production workload account should be configured for limited user access. The primary user is a shared operations team that supports the infrastructure for all of the applications that run on it.
+Users in this account should not have access to modify resources as all resource configuration is performed as code from the BU Administration account.  In general, the production workload account should be configured for limited user access. The primary user is a shared operations team that supports the infrastructure for all of the applications that run on it.
 
-If you are using the [VPC reference architecture for IBM Cloud for Financial Services](/docs/framework-financial-services?topic=framework-financial-services-vpc-architecture-about), the VPC in the workload account corresponds to the workload VPC in the reference architecture. The management and edge VPCs are located in the BU administration account.
+If using the [VPC reference architecture for IBM Cloud for Financial Services](/docs/framework-financial-services?topic=framework-financial-services-vpc-architecture-about), the VPC in the workload account corresponds to the workload VPC in the reference architecture.  The management and edge VPCs are located in the BU Administration Account.
 
 
 | Component | Quantity | Description |
 |-----------|--------------|----|
-| Workload VPC | 1 | Provides networking for this instance of shared infrastructure. Connects to the rest of the enterprise through the centralized transit gateway. Diagram shows examples components such as Red Hat OpenShift on IBM Cloud. However, other service might be included. See the [VPC reference architecture for IBM Cloud for Financial Services](/docs/framework-financial-services?topic=framework-financial-services-vpc-architecture-about) for more details |
+| Workload VPC | 1 | Provides networking for this instance of shared infrastructure. Connects to the rest of the enterprise through the centralized transit gateway. Diagram shows examples components such as Red Hat OpenShift on IBM Cloud, however, other service may be included.  See the [VPC reference architecture for IBM Cloud for Financial Services](/docs/framework-financial-services?topic=framework-financial-services-vpc-architecture-about) for more details |
 | Infrastructure Trusted Profile | 1 | Authorizes management of this account and the shared infrastructure by a project in the BU administration account. |
 | Infrastructure operations access group | 1 | Access group to enable a BU DevOps team to monitor and manage the shared infrastructure |
 | Application operations access group | n | Access groups to enable applications teams to operate their development tools and monitor their app |
@@ -44,18 +44,18 @@ Additional Components not shown in the diagram:
 | Activity Tracker | 1 | Provides an audit trail for activity within the account |
 | IBM Cloud Logging | 1 | Provides log monitoring for the infrastructure and services in the account |
 | IBM Cloud Monitoring | 1 | Provides performance and error monitoring for the infrastructure and services in the account |
-| Additional IBM Cloud Services | n | Any additional services (databases, Watson, Event Streams, and so on) required to support the application workloads |
+| Additional IBM Cloud Services | n | Any additional services (databases, watson, event streams, etc.) required to support the application workloads |
 {: caption="Table 1. Additional components" caption-side="bottom"}
 
-![Dev workload diagram. All of the information is conveyed in the surrounding text.](images/dev-workload.svg){: caption="Figure 2. Development workload account" caption-side="bottom"}
+![Dev workload diagram. All of the information is conveyed in the surrounding text.](images/dev-workload.svg){: caption="Figure 2. Nonproduction workload account" caption-side="bottom"}
 
-The development workload accounts contain the same shared application hosting infrastructure as the production workload account, although clusters can be scaled down to save cost. The development workload account also contains application development tools such as IBM Continuous Delivery Toolchains with their associated Git repos and CI/CD pipelines.
+The nonproduction workload accounts contain the same shared application hosting infrastructure as the production workload account, although clusters can be scaled down to save cost. The nonproduction workload account also contains application development and test tools such as IBM Continuous Delivery Toolchains with their associated Git repos and CI/CD pipelines.
 
-Users in this account should not have access to modify resources as all resource configuration is performed as code from the BU Administration account. However, development workload accounts are accessible to developers to trigger and monitor CI/CD pipeline runs, access Git repos, and monitor the development infrastructure and software through observability tools.
+Users in this account should not have access to modify resources as all resource configuration is performed as code from the BU Administration account.  However, nonproduction workload accounts are accessible to developers to trigger and monitor CI/CD pipeline runs, access Git repos, and monitor the development infrastructure and software through observability tools.
 
 Additional components over the production workload account:
 | Component | Quantity | Description |
-|-----------|--------------|---------|
+|-----------|--------------|----|
 | Application resource group | n | Contains application development infrastructure and services such as toolchains and evidence lockers. Only present in a development workload account. |
 | Application trusted profile | n | Authorizes management of an application resource group by a project in the BU administration account. Only present in a development workload account. |
 | Application operations access group | n | Access groups to enable applications teams to operate their development tools and monitor their app |
@@ -104,4 +104,4 @@ Consider the following items when you are using shared application infrastructur
 
 - Hosting multiple applications on Kubernetes
 
-   Red Hat OpenShift and Kubernetes are designed for efficient hosting of multiple applications. However, it is best practice to leverage Kubernetes names spaces for application isolation and istio for application network ingress and egress controls. The cluster configuration to support an application must be automated, and that automation owned by the shared infrastructure hosting project. However, application owners can provide information to tailor the automation to there needs. Note that application owners should not have permission to modify the configuration of the shared infrastructure directly.
+   Red Hat Open Shift and Kubernetes are designed for efficient hosting of multiple applications.  However, it is best practice to leverage kubernetes names spaces for application isolation and istio for application network ingress and egress controls.  The cluster configuration to support an application must be automated and that automation owned by the shared infrastructure hosting project, however, application owners can provide information to tailor the automation to there needs.  Note that application owners should not have permission to modify the configuration of the shared infrastructure directly.

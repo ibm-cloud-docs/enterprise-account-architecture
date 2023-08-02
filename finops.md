@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-06-29"
+lastupdated: "2023-08-02"
 
 subcollection: enterprise-account-architecture
 
@@ -12,7 +12,7 @@ keywords:
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Cloud financal management
+# Cloud financial management
 {: #finops}
 
 Cloud financial management is the cultural practice of extracting more value out of cloud resources by holding teams within your enterprise accountable for their cloud costs rather than being managed at the account level by the finance department.
