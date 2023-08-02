@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-04-10"
+lastupdated: "2023-08-02"
 
 subcollection: enterprise-account-architecture
 
@@ -20,7 +20,6 @@ Large enterprises that allow an account structure, cross account networking, res
 
 This recommendation extends and complements the account and resource level guidance that is found in the [IBM Cloud Framework for Financial Services](/docs/framework-financial-services?topic=framework-financial-services-about) and other IBM Cloud best practices such as:
 
-- [Cloud best practices for IT executives](https://www.ibm.com/downloads/cas/NYWPPW6K){: external}
 - [Best practices for setting up an enterprise](/docs/secure-enterprise?topic=secure-enterprise-enterprise-best-practices)
 - [Best practices for organizing resources and assigning access](/docs/account?topic=account-account_setup)
 - [Best practices for organizing users, teams, and applications](/docs/solution-tutorials?topic=solution-tutorials-users-teams-applications)

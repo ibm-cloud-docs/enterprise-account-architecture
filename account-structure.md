@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-06-29"
+lastupdated: "2023-08-02"
 
 subcollection: enterprise-account-architecture
 
@@ -25,13 +25,13 @@ The following shows each type of account and its purpose:
 
 | Account type | Quantity | Location | Purpose |
 |--------------|----------|----------|---------|
-| [Security and Compliance Center](/docs/enterprise-account-architecture?topic=enterprise-account-architecture-scc-account-structure)   | 2 | Development and production enterprise root | Hosts Security and Compliance Center and its dependencies |
-| [Central administration](/docs/enterprise-account-architecture?topic=enterprise-account-architecture-admin-hub-account)    | 1 | Production administration account group | Hosts infrastructure as code to manage development and production enterprise configuration |
-| [Network and service hub](/docs/enterprise-account-architecture?topic=enterprise-account-architecture-hub-account) | 2 | Development and production administration account group | Hosts centralized network resources, shared cloud tools, and any account wide shared custom services |
-| [Business unit administration](/docs/enterprise-account-architecture?topic=enterprise-account-architecture-bu-admin-account)     | 1-25 | Production BU account groups | Hosts infrastructure as code to manage workload accounts and the workload account's applications and infrastructure |
-| [Workload](/docs/enterprise-account-architecture?topic=enterprise-account-architecture-infra-account)     | 2-500 | Development and production BU account groups| Hosts shared infrastructure for hosting application workloads. Used in development - production pairs |
-| [Infrastructure as code development and test](/docs/enterprise-account-architecture?topic=enterprise-account-architecture-iac-account)      | 1+1 | Development BU account groups | 1 Account to host cloud tools for infrastructure as code development and 1 for test deployments |
-| [Backup](/docs/enterprise-account-architecture?topic=enterprise-account-architecture-dr)      | 3-51 | Store backup and DR data | 1 for the Admin Account Group + 2 per BU (1 dev and 1 prod) |
+| [Security and Compliance Center](/docs/enterprise-account-architecture?topic=enterprise-account-architecture-scc-account-structure) | 2 | Production and nonproduction enterprise root account | Hosts Security and Compliance Center and its dependencies |
+| [Central administration](/docs/enterprise-account-architecture?topic=enterprise-account-architecture-admin-hub-account) | 1 | Production administration account group | Hosts infrastructure as code to manage both production and nonproduction enterprise configuration |
+| [Network and service hub](/docs/enterprise-account-architecture?topic=enterprise-account-architecture-hub-account) | 2 | Production and nonproduction administration account group | Hosts centralized network resources, shared cloud tools, and any enterprise wide shared custom services |
+| [Business unit administration](/docs/enterprise-account-architecture?topic=enterprise-account-architecture-bu-admin-account) | 1-25 | Production BU account groups | Hosts infrastructure as code to manage workload accounts and the workload account's applications and infrastructure |
+| [Workload](/docs/enterprise-account-architecture?topic=enterprise-account-architecture-infra-account)     | 2-500 | Production and nonproduction and BU account groups| Hosts shared infrastructure for hosting application workloads. Used in pairs |
+| [Infrastructure as code development and test](/docs/enterprise-account-architecture?topic=enterprise-account-architecture-iac-account) | 1+1 | Nonproduction BU account groups | 1 Account to host cloud tools for infrastructure as code development and 1 for test deployments |
+| [Backup](/docs/enterprise-account-architecture?topic=enterprise-account-architecture-dr) | 3-51 | Store backup and DR data | 1 for the Admin Account Group + 2 per BU (1 nonproduction and 1 production) |
 {: caption="Table 1. Account purpose" caption-side="bottom"}
 
 ## Rationale for separate development and production enterprises
