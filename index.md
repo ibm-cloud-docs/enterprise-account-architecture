@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-08-02"
+lastupdated: "2023-04-10"
 
 subcollection: enterprise-account-architecture
 
@@ -12,7 +12,7 @@ keywords:
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Enterprise account architecture
+# Enterprise architecture
 {: #about}
 
 Large enterprises that allow an account structure, cross account networking, resource deployment, and billing to develop organically run the risk of encountering governance, scaling, security, and accounting issues. This document provides a recommendation for how to address these concerns across accounts so that a robust, compliant, and scalable solution can be achieved.
