@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2023-10-15"
+  years: 2023, 2024
+lastupdated: "2024-04-26"
 
 subcollection: enterprise-account-architecture
 
@@ -43,6 +43,7 @@ Supporting the infrastructure as code elements in the BU administration account 
 | Schematics agent | 1 | Used to enable privately hosted custom deployable architectures in the private catalog. |
 | Schematics workspaces | n | Orchestrated by projects, used to deploy the deployable architectures, and store the terraform state. One workspace per configuration within each project. |
 | Management/Edge VPC | 1 | Hosts the shared management and edge resources for the business unit. This can include public load balancers, bastion hosts, and custom management services. |
+| Security and Compliance Center | 1 | Monitors the business uint account group in both production and nonproduction enterprises |
 {: caption="Table 2. Components" caption-side="bottom"}
 
 The schematics agent can be deployed in the Management/Edge VPC, but the agent should not be accessible from the public internet.
@@ -55,10 +56,18 @@ Additional Components not shown in the diagram:
 | Activity Tracker | 1 | Provides an audit trail for activity within the account |
 | IBM Cloud Logging | 1 | Provides log monitoring for the infrastructure hosting the Schematics Agent |
 | IBM Cloud Monitoring | 1 | Provides performance and error monitoring for the Schematics Agent |
-| Event Notifications | 1 | Provides notifications for Projects |
+| Event Notifications | 1 | Provides notifications for projects and the Security and Compliance Center |
 | Automation trusted profile | 1 | Authorizes the central administration project to manage the infrastructure in this account. |
 | Access groups and trusted profiles | n | A number of access groups and trusted profiles that are used to authorize BU operators to use catalogs and projects. |
 {: caption="Table 3. Additional components" caption-side="bottom"}
+
+## Security and Compliance Monitoring
+
+Security and Compliance Center is most valuable when all relevant resources are scanned with an appropriate profile. Reasoning about resource coverage can be difficult in the face of independent Security and Compliance Center instances, complex scope configuration, and complex account structures.
+
+Centralizing the Security and Compliance Center and configuring a broad scope that covers the business unit account group, makes reasoning about resource coverage easy while still allowing business unit autonomy over compliance objectives. This in turn, makes it easy to prove to internal and external auditors that all cloud resources within an audit scope are covered by appropriate Security and Compliance Center scans.
+
+The instance of Security and Compliance Center deployed to the business unit administration account is configured to monitor all accounts in the business unit accoung group in both production and nonproduction enterprises ([docs](/docs/security-compliance?topic=security-compliance-scan-resources-cross-account)). It's also configured to send alerts with Event Notifications so that compliance problems are detected early and can be resolved rapidly.
 
 ## Management / Edge VPC
 {: #management-edge-vpc}

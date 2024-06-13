@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2023-10-15"
+  years: 2023, 2024
+lastupdated: "2024-04-26"
 
 subcollection: enterprise-account-architecture
 
@@ -25,7 +25,6 @@ The following shows each type of account and its purpose:
 
 | Account type | Quantity | Location | Purpose |
 |--------------|----------|----------|---------|
-| [Security and Compliance Center](/docs/enterprise-account-architecture?topic=enterprise-account-architecture-scc-account-structure)   | 2 | Production and Nonproduction enterprise root account. | Hosts Security and Compliance Center and its dependencies. |
 | [Central administration](/docs/enterprise-account-architecture?topic=enterprise-account-architecture-admin-hub-account)    | 1 | Production administration account group. | Hosts infrastructure as code to manage both prod and nonprod enterprise configuration. |
 | [Network and service hub](/docs/enterprise-account-architecture?topic=enterprise-account-architecture-hub-account) | 2 | Production and nonproduction administration account group. | Hosts centralized network resources, shared cloud tools, and any enterprise-wide shared custom services |
 | [Business unit administration](/docs/enterprise-account-architecture?topic=enterprise-account-architecture-bu-admin-account)     | 1-25 | Production BU account groups | Hosts infrastructure as code to manage workload accounts and the workload account's applications and infrastructure. |
@@ -33,6 +32,9 @@ The following shows each type of account and its purpose:
 | [Infrastructure as code development and test](/docs/enterprise-account-architecture?topic=enterprise-account-architecture-iac-account)      | 1+1 | Nonprod BU account groups | 1 Account to host cloud tools for infrastructure as code development and 1 for test deployments. |
 | [Backup](/docs/enterprise-account-architecture?topic=enterprise-account-architecture-dr)      | 3-51 | Store backup and DR data | 1 for the Admin Account Group + 2 per BU (1 nonprod and 1 prod) |
 {: caption="Table 1. Account purpose" caption-side="bottom"}
+
+Improvements to Security and Compliance Center eliminate the need for an Security and Compliance Center deployment in the root of each enterprise.  Security and Compliance Center instances should be deployed in the administration accounts.
+{: note}
 
 ## Rationale for separate production and nonproduction enterprises
 {: #rationale-separate-enterprise }
@@ -49,7 +51,7 @@ There are some limitations to using multiple enterprises, for example subscripti
 ## User Access
 {: #user-access}
 
-In general, users should not be directly provisioned within this account structure. Instead, use [Federated identities](/docs/account?topic=account-federated_id) in combination with [trusted profiles](/docs/account?topic=account-create-trusted-profile) or [dynamic access groups](/docs/account?topic=account-rules) to grant access permissions in accounts as required.
+In general, users should not be directly provisioned within this account structure. Instead, use [Federated identities](/docs/account?topic=account-federated_id) in combination with [trusted profiles](/docs/account?topic=account-create-trusted-profile) or [dynamic access groups](/docs/account?topic=account-rules) to grant access permissions in accounts as required.  Use of dynamic access groups or trusted profiles ensures cloud privileges stay in sync with the user's role as captured in the corporate directory and reduce the number of access policies that need to be managed.
 
 ## Scaling down
 {: #scaling-down}

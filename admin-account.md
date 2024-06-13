@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2023-10-15"
+  years: 2023, 2024
+lastupdated: "2024-04-26"
 
 subcollection: enterprise-account-architecture
 
@@ -23,12 +23,13 @@ The central administration account contains a catalog of deployable architecture
 
 | Component | Quantity | Description |
 |-----------|--------------|----|
-| Security and Compliance Project | 1 |  Manages the infrastructure as code for deploying the Security and Compliance Center and its dependencies in the root account. |
+| Security and Compliance project | 1 |  Manages the infrastructure as code for deploying the Security and Compliance Center and its dependencies in this account. |
 | Network and Services project | 1 | Manages the infrastructure as code for deploying centralized networking and other common services into the central administration account. |
 | Business unit project | 1-25 | Manages the infrastructure as code for deploying a business unit account group, a backup account, the business unit administration account, and the BU administration account contents. |
 | Central administration project | 1 | Manages the infrastructure as code for deploying the resources in the central administration account, creating and configuring the administration backup account. |
 | Private catalog | 1 | Used to host the approved deployable architectures for the projects in this account. |
 | Schematics agent | 1 | Used enable privately hosted custom deployable architectures in the private catalog for this account. |
+| Security and Compliance Center | 1 | Monitors enterprise root account and the administration account group in both production and nonproduction enterprises |
 {: caption="Table 1. Components" caption-side="bottom"}
 
 The schematics agent, catalog, projects, and schematics workspaces must co-reside in a single account.
@@ -41,7 +42,9 @@ Additional components not shown in the diagram:
 | Activity Tracker | 1 | Provides an audit trail for activity within the account |
 | IBM Cloud Logging | 1 | Provides log monitoring for the infrastructure hosting the Schematics Agent |
 | IBM Cloud Monitoring | 1 | Provides performance and error monitoring for the Schematics Agent |
-| Event Notifications | 1 | Provides notifications for Projects |
+| Event Notifications | 1 | Provides notifications for projects and the Security and Compliance Center |
+| Cloud Object Storage | 1 | Used to store Security and Compliance Center results |
+| Compliance access group | 1 | Used to authorize users view scan results |
 {: caption="Table 2. Additional components" caption-side="bottom"}
 
 ## Infrastructure as code
