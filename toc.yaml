@@ -13,6 +13,7 @@ toc:
     path: enterprise-account-architecture
     description: A generalized recommendation for how large customers should configure and govern IBM Cloud at scale.
     label: Enterprise architecture
+    navigation: hidden
   entries:
   - navgroup:
       id: overview

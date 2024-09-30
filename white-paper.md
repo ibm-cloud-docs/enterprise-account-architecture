@@ -524,6 +524,7 @@ The nonproduction workload accounts contain the same shared application hosting 
 Users in this account should not have access to modify resources as all resource configuration is performed as code from the BU Administration account.  However, nonproduction workload accounts are accessible to developers to trigger and monitor CI/CD pipeline runs, access Git repos, and monitor the development infrastructure and software through observability tools.
 
 Additional components over the production workload account:
+
 | Component | Quantity | Description |
 |-----------|--------------|----|
 | Application resource group | n | Contains application development infrastructure and services such as toolchains and evidence lockers. Only present in a development workload account. |
@@ -709,49 +710,17 @@ Services that provide built in backup facilities might have limitations regardin
 #### Service-specific considerations
 {: #service-considerations}
 
-##### IBM Cloud Databases
-{: #icd}
-
-[IBM Cloud Databases](/docs/cloud-databases?topic=cloud-databases-about) provide automatic daily backups that are stored in the same account and geography. Backups are typically stored in [cross-regional storage](/docs/cloud-databases?topic=cloud-databases-dashboard-backups&interface=ui#backup-locations) and should therefore be immune to a single region outage. This facility is reliable and convenient, but does not currently support backup storage in a specified alternate region or account. However, backups can be [restored to another region or account](/docs/cloud-databases?topic=cloud-databases-dashboard-backups&interface=ui), so recovery to a passive deployment (cold standby) is supported.
-
-It is also possible to use database-specific clients (for example pg_dump for PostgreSQL) to backup IBM Cloud Databases to arbitrary storage by using customer automation. If used, these backups should be stored in Cloud Object Storage in an alterative region and in the backup account as described in [Backup accounts](#accounts).
-
-##### Virtual servers
-{: #vsi}
-
-Both [volume snapshots](https://cloud.ibm.com/docs/vpc?topic=vpc-backups-vpc-best-practices&interface=ui) and [Veeam](/docs/vpc?topic=vpc-about-veeam) are available to backup virtual servers. Veeam is preferred for extensive feature set and its ability to backup application workloads. However, Veeam does require deploying an agent to backup workloads not hosted on VMWare. The Veeam server that is used for backups should be located in a alterative region and in the backup account as described in [Backup accounts](#accounts).
-
-##### Red Hat OpenShift / Kubernetes
-{: #roks-kub}
-
-Red Hat OpenShift and Kubernetes clusters on IBM Cloud can be backed up through [PX-Backup](/docs/containers?topic=containers-storage_portworx_backup). The Portworks server that is used for backups should be located in a alterative region and in the backup account as described in [Backup accounts](#accounts).
-
-##### Secrets Manager
-{: #secrets-mgr}
-
-Secrets manager can be [backed up using the IBM Cloud CLI](/docs/secrets-manager?topic=secrets-manager-ha-dr#auto-backup) and customer-supplied automation. These backups should be stored in a backup instance of secrets manager in an alterative region and in the backup account as described in [Backup accounts](#accounts).
-
-##### Cloud Object Storage
-{: #cos}
-
-Cloud Object Storage buckets can be cross regional, regional, or stored in a single data center. In addition, Cloud Object Storage Buckets can be backed up using [bucket replication](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-replication-overview). These backups should be stored in a Cloud Object Storage bucket in a alterative region and in the backup account as described in [Backup accounts](#accounts).
-
-
-##### Cloudant
-{: #cloudant}
-
-Cloudant is a highly available NoSQL DB that can be configured with replicas in multiple regions. In addition, Cloudant backups can be taken by using the [CouchBackup](/docs/Cloudant?topic=Cloudant-ibm-cloudant-backup-and-recovery) client that uses customer-supplied automation. These backups should be stored in Cloud Object Storage in a alterative region and in the backup account as described in [Backup accounts](#accounts).
-
-##### Event Streams
-{: #event-streams}
-
-Event Streams is a highly available Kafka as a service. Given the nature of eventing systems, point in time backups are likely of little value. However, [mirroring to a second region](/docs/EventStreams?topic=EventStreams-mirroring_setup) is recommended for disaster recovery.
-
-##### Other services
-{: #other-services}
-
-For more information on backups, see service-specific documentation.
-
+| Service | Description |
+|--------|---------|
+| IBM Cloud Databases | [IBM Cloud Databases](/docs/cloud-databases?topic=cloud-databases-about) provide automatic daily backups that are stored in the same account and geography. Backups are typically stored in [cross-regional storage](/docs/cloud-databases?topic=cloud-databases-dashboard-backups&interface=ui#backup-locations) and should therefore be immune to a single region outage. This facility is reliable and convenient, but does not currently support backup storage in a specified alternate region or account. However, backups can be [restored to another region or account](/docs/cloud-databases?topic=cloud-databases-dashboard-backups&interface=ui), so recovery to a passive deployment (cold standby) is supported. /n /n It is also possible to use database-specific clients (for example pg_dump for PostgreSQL) to backup IBM Cloud Databases to arbitrary storage by using customer automation. If used, these backups should be stored in Cloud Object Storage in an alterative region and in the backup account as described in [Backup accounts](#accounts).|
+| Virtual servers | Both [volume snapshots](https://cloud.ibm.com/docs/vpc?topic=vpc-backups-vpc-best-practices&interface=ui) and [Veeam](/docs/vpc?topic=vpc-about-veeam) are available to backup virtual servers. Veeam is preferred for extensive feature set and its ability to backup application workloads. However, Veeam does require deploying an agent to backup workloads not hosted on VMWare. The Veeam server that is used for backups should be located in a alterative region and in the backup account as described in [Backup accounts](#accounts). |
+| Red Hat OpenShift / Kubernetes | Red Hat OpenShift and Kubernetes clusters on IBM Cloud can be backed up through [PX-Backup](/docs/containers?topic=containers-storage_portworx_backup). The Portworks server that is used for backups should be located in a alterative region and in the backup account as described in [Backup accounts](#accounts). |
+| Secrets Manager | Secrets manager can be [backed up using the IBM Cloud CLI](/docs/secrets-manager?topic=secrets-manager-ha-dr#auto-backup) and customer-supplied automation. These backups should be stored in a backup instance of secrets manager in an alterative region and in the backup account as described in [Backup accounts](#accounts). |
+| Cloud Object Storage | Cloud Object Storage buckets can be cross regional, regional, or stored in a single data center. In addition, Cloud Object Storage Buckets can be backed up using [bucket replication](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-replication-overview). These backups should be stored in a Cloud Object Storage bucket in a alterative region and in the backup account as described in [Backup accounts](#accounts). |
+| Cloudant | Cloudant is a highly available NoSQL DB that can be configured with replicas in multiple regions. In addition, Cloudant backups can be taken by using the [CouchBackup](/docs/Cloudant?topic=Cloudant-ibm-cloudant-backup-and-recovery) client that uses customer-supplied automation. These backups should be stored in Cloud Object Storage in a alterative region and in the backup account as described in [Backup accounts](#accounts). |
+| Event Streams | Event Streams is a highly available Kafka as a service. Given the nature of eventing systems, point in time backups are likely of little value. However, [mirroring to a second region](/docs/EventStreams?topic=EventStreams-mirroring_setup) is recommended for disaster recovery. |
+| Other services | For more information on backups, see service-specific documentation. |
+{: caption="Table 1. Service-specific considerations" caption-side="bottom"}
 
 #### Related controls in IBM Cloud Framework for Financial Services
 {: #iac-controls}
@@ -766,4 +735,3 @@ The following [IBM Cloud Framework for Financial Services controls](/docs/framew
 | | [CP-9 Information System Backup](/docs/framework-financial-services-controls?topic=framework-financial-services-controls-cp-9) |
 | | [CP-10 Information System Recovery and Reconstitution](/docs/framework-financial-services-controls?topic=framework-financial-services-controls-cp-10) |
 {: caption="Table 1. IBM Cloud Framework for Financial Services controls" caption-side="bottom"}
-
