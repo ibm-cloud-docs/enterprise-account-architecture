@@ -63,7 +63,7 @@ The following table includes some of these common requirements that are targeted
 | | Integration with governance tools| Includes security advisor |
 | Compliance | Financial Services Cloud | Compliant by default, audited, shift left |
 | | SOC2, GDPR, and so on | Compliance coverage |
-{: caption="Table 1. Common Requirements for large enterprises" caption-side="bottom"}
+{: caption="Common Requirements for large enterprises" caption-side="bottom"}
 
 ## Volumetric analysis
 {: #volumetric-analysis}
@@ -72,7 +72,7 @@ To accommodate [maximum scaling requirements](/docs/enterprise-account-architect
 
 Use of two enterprises are recommended to separate nonproduction and production resources for operational, accounting, and scaling benefits. Within each enterprise, applications and shared infrastructure are placed within a hierarchy of account groups that represent business units and optional subgroups. These subgroups can be used to represent portfolios or other parts of a business unit org tree.
 
-![volumetric analysis diagram](images/volumetrics.svg){: caption="Figure 1. Volumetric Analysis: how basic account structure scales to required number of applications" caption-side="bottom"}
+![volumetric analysis diagram](images/volumetrics.svg){: caption="Volumetric Analysis: how basic account structure scales to required number of applications" caption-side="bottom"}
 
 The two enterprise model increases separation between the nonproduction and production environments, enables separate billing and accounting, and improves scale. However, it increases complexity and requires duplication of some work, for example, setting up enterprises and configuring certain shared services. This duplication of work is largely mitigated through automation.
 
@@ -114,7 +114,7 @@ The following [IBM Cloud Framework for Financial Services controls](/docs/framew
 | | [CM-2 (2) Automation Support for Accuracy / Currency](/docs/framework-financial-services-controls?topic=framework-financial-services-controls-cm-2.2) |
 | | [CM-3 Configuration Change Control](/docs/framework-financial-services-controls?topic=framework-financial-services-controls-cm-3) |
 | Access Control (AC) | [AC-5 Separation of Duties](/docs/framework-financial-services-controls?topic=framework-financial-services-controls-ac-5) |
-{: caption="Table 2. IBM Cloud Framework for Financial Services controls" caption-side="bottom"}
+{: caption="IBM Cloud Framework for Financial Services controls" caption-side="bottom"}
 
 ### Separate development and production
 {: #dev-and-prod}
@@ -136,7 +136,7 @@ The following [IBM Cloud Framework for Financial Services controls](/docs/framew
 | | [SA-15 (9) Development Process, Standards, and Tools &#124; Use of Live Data](/docs/framework-financial-services-controls?topic=framework-financial-services-controls-sa-15.9) |
 | System and Communications Protection (SC) | [SC-2 Application Partitioning](/docs/framework-financial-services-controls?topic=framework-financial-services-controls-sc-2) |
 | | [SC-3 Security Function Isolation](/docs/framework-financial-services-controls?topic=framework-financial-services-controls-sc-3) |
-{: caption="Table 3. IBM Cloud Framework for Financial Services controls" caption-side="bottom"}
+{: caption="IBM Cloud Framework for Financial Services controls" caption-side="bottom"}
 
 
 ### Hub and spoke model
@@ -175,7 +175,7 @@ The following [IBM Cloud Framework for Financial Services controls](/docs/framew
 |---------------------|---------------------------------------------------|
 | System and Communications Protection (SC) | [SC-2 Application Partitioning](/docs/framework-financial-services-controls?topic=framework-financial-services-controls-sc-2) |
 | | [SC-3 Security Function Isolation](/docs/framework-financial-services-controls?topic=framework-financial-services-controls-sc-3)
-{: caption="Table 4. IBM Cloud Framework for Financial Services controls" caption-side="bottom"}
+{: caption="IBM Cloud Framework for Financial Services controls" caption-side="bottom"}
 
 ### Work within IBM Cloud operating limits and constraints
 {: #constraints}
@@ -194,7 +194,7 @@ Examples of such quotas and limits include:
 
 A large organization needs to register for two IBM Cloud enterprises and then sets them up following this pattern.
 
-![Diagram of a typical enterprise account structure. All of the information is conveyed in the surrounding text.](images/account-structure.svg){: caption="Figure 2. Enterprise account structure" caption-side="bottom"}
+![Diagram of a typical enterprise account structure. All of the information is conveyed in the surrounding text.](images/account-structure.svg){: caption="Enterprise account structure" caption-side="bottom"}
 
 Each enterprise has a central account group to store administrative tools and enterprise-wide shared services. It also has a set of account groups for each business unit.
 
@@ -208,7 +208,7 @@ The following shows each type of account and its purpose:
 | [Workload](/docs/enterprise-account-architecture?topic=enterprise-account-architecture-infra-account)     | 2-500 | Production and nonproduction and BU account groups| Hosts shared infrastructure for hosting application workloads. Used in pairs |
 | [Infrastructure as code development and test](/docs/enterprise-account-architecture?topic=enterprise-account-architecture-iac-account)      | 1+1 | Nonprod BU account groups | 1 Account to host cloud tools for infrastructure as code development and 1 for test deployments. |
 | [Backup](/docs/enterprise-account-architecture?topic=enterprise-account-architecture-dr)      | 3-51 | Store backup and DR data | 1 for the Admin Account Group + 2 per BU (1 nonprod and 1 prod) |
-{: caption="Table 5. Account purpose" caption-side="bottom"}
+{: caption="Account purpose" caption-side="bottom"}
 
 Improvements to Security and Compliance Center eliminate the need for an Security and Compliance Center deployment in the root of each enterprise.  Security and Compliance Center instances should be deployed in the administration accounts.
 {: note}
@@ -253,7 +253,7 @@ Not all enterprises will require maximum scale immediately. In this case there a
 
 This administrative account centralizes the management of the deployable architectures that are needed to provision the enterprise account structure, the Security and Compliance Center, and the tools account across both development and production.
 
-![Central administration diagram. All of the information is conveyed in the surrounding text.](images/admin-hub.svg){: caption="Figure 3. Central administration account" caption-side="bottom"}
+![Central administration diagram. All of the information is conveyed in the surrounding text.](images/admin-hub.svg){: caption="Central administration account" caption-side="bottom"}
 
 The central administration account contains a catalog of deployable architectures that are deployed through IBM Cloud projects to manage the top-level accounts in both development and production to ensure that both enterprises have nearly the same configuration and to provide centralized management. This account also holds the schematics agent to enable custom deployable architectures stored in corporate Git.
 
@@ -266,7 +266,7 @@ The central administration account contains a catalog of deployable architecture
 | Private catalog | 1 | Used to host the approved deployable architectures for the projects in this account. |
 | Schematics agent | 1 | Used enable privately hosted custom deployable architectures in the private catalog for this account. |
 | Security and Compliance Center | 1 | Monitors enterprise root account and the administration account group in both production and nonproduction enterprises |
-{: caption="Table 6. Components" caption-side="bottom"}
+{: caption="Components" caption-side="bottom"}
 
 The schematics agent, catalog, projects, and schematics workspaces must co-reside in a single account.
 {: important}
@@ -281,14 +281,14 @@ Additional components not shown in the diagram:
 | Event Notifications | 1 | Provides notifications for projects and the Security and Compliance Center |
 | Cloud Object Storage | 1 | Used to store Security and Compliance Center results |
 | Compliance access group | 1 | Used to authorize users view scan results |
-{: caption="Table 7. Additional components" caption-side="bottom"}
+{: caption="Additional components" caption-side="bottom"}
 
 ### Infrastructure as code
 {: #iac}
 
 The central administration account hosts the infrastructure as code and configuration to perform the initial setup and ongoing maintenance of the key accounts in the enterprise architecture.
 
-![Accounts that are managed from the central administration account. All of the information is conveyed in the surrounding text.](images/central-admin-iac.svg){: caption="Figure 4. Accounts managed from the central administration account" caption-side="bottom"}
+![Accounts that are managed from the central administration account. All of the information is conveyed in the surrounding text.](images/central-admin-iac.svg){: caption="Accounts managed from the central administration account" caption-side="bottom"}
 
 ### Authorization
 {: #admin-auth}
@@ -328,7 +328,7 @@ Steps to bootstrap the Central Administration Account:
 
 The network and services hub account provides a location for centralized network services, centralized security services, and any customer services that also require centralization.
 
-![hub account diagram. All of the information is conveyed in the surrounding text.](images/shared-tools.svg){: caption="Figure 5. Network and services hub account" caption-side="bottom"}
+![hub account diagram. All of the information is conveyed in the surrounding text.](images/shared-tools.svg){: caption="Network and services hub account" caption-side="bottom"}
 
 A network and services hub account is created in both development and production environments.
 
@@ -341,7 +341,7 @@ A network and services hub account is created in both development and production
 | Shared customer applications | n | Customer applications that must be centralized can be deployed here |
 | Trusted profile | 1 | Authorizes management of this account by a project in the central administration account |
 | Access groups | n | Small number of access groups to enable a centralized DevOps team to monitor and manage the account |
-{: caption="Table 8. Components" caption-side="bottom"}
+{: caption="Components" caption-side="bottom"}
 
 ### Rationale for centralizing shared resources
 {: #rationale}
@@ -375,7 +375,7 @@ Each production business unit (BU) account group has a business unit administrat
 
 Self-administration is constrained to the capabilities of the deployable architectures (infrastructure as code templates) provided in the application and infrastructure catalogs. These deployable architectures can include a subset of public offerings from {{site.data.keyword.cloud_notm}} and private offerings that are developed within the [IaC development accounts](/docs/enterprise-account-architecture?topic=enterprise-account-architecture-iac-account) and shared with the BU administration account.
 
-![BU Admin IaC diagram. All of the information is conveyed in the surrounding text.](images/bu-hub.svg){: caption="Figure 6. BU administration account infrastructure as code" caption-side="bottom"}
+![BU Admin IaC diagram. All of the information is conveyed in the surrounding text.](images/bu-hub.svg){: caption="BU administration account infrastructure as code" caption-side="bottom"}
 
 Deployable architectures in the infrastructure catalog enable workload accounts to be created and provisioned with the shared infrastructure needed to host applications in a secure and compliant manner.
 
@@ -387,9 +387,9 @@ Deployable architectures in the infrastructure catalog enable workload accounts 
 | Shared infrastructure project | n | Manages the infrastructure as code for deploying dev and prod workload accounts and the shared infrastructure within those accounts. |
 | IaC Dev Project | 1 | Manages the infrastructure as code for deploying dev and test IaC accounts. These accounts are used for developing and testing deployable architectures. |
 | Application - Infrastructure Sets | n | Conceptual grouping - groups a set of application projects and the project that deploys the infrastructure to host those applications. |
-{: caption="Table 9. Components" caption-side="bottom"}
+{: caption="Components" caption-side="bottom"}
 
-![BU Admin service diagram. All of the information is conveyed in the surrounding text.](images/bu-hub-2.svg){: caption="Figure 7. BU administration account services" caption-side="bottom"}
+![BU Admin service diagram. All of the information is conveyed in the surrounding text.](images/bu-hub-2.svg){: caption="BU administration account services" caption-side="bottom"}
 
 Supporting the infrastructure as code elements in the BU administration account are Schematics workspaces and the Schematics agent. Schematics enables the use of deployable architectures that are stored in private Git repos that are hosted on the corporate network. This account also hosts the management and edge VPCs used in the VPC landing zone reference architecture if required by the BU.
 
@@ -399,7 +399,7 @@ Supporting the infrastructure as code elements in the BU administration account 
 | Schematics workspaces | n | Orchestrated by projects, used to deploy the deployable architectures, and store the terraform state. One workspace per configuration within each project. |
 | Management/Edge VPC | 1 | Hosts the shared management and edge resources for the business unit. This can include public load balancers, bastion hosts, and custom management services. |
 | Security and Compliance Center | 1 | Monitors the business uint account group in both production and nonproduction enterprises |
-{: caption="Table 10. Components" caption-side="bottom"}
+{: caption="Components" caption-side="bottom"}
 
 The schematics agent can be deployed in the Management/Edge VPC, but the agent should not be accessible from the public internet.
 
@@ -414,7 +414,7 @@ Additional Components not shown in the diagram:
 | Event Notifications | 1 | Provides notifications for projects and the Security and Compliance Center |
 | Automation trusted profile | 1 | Authorizes the central administration project to manage the infrastructure in this account. |
 | Access groups and trusted profiles | n | A number of access groups and trusted profiles that are used to authorize BU operators to use catalogs and projects. |
-{: caption="Table 11. Additional components" caption-side="bottom"}
+{: caption="Additional components" caption-side="bottom"}
 
 ### Security and Compliance Monitoring
 {: #security-compliance-monitoring}
@@ -435,7 +435,7 @@ The Financial Services Cloud reference architecture separates management and pub
 
 The Business Unit administration account hosts the infrastructure as code and configuration to perform the initial setup and ongoing maintenance of the workload accounts for the Business Unit. Workload accounts are created and managed in a self-serve fashion that is limited to the deployable architectures made available within the private catalogs for the Business Unit.
 
-![Accounts that are managed from the BU administration account. All of the information is conveyed in the surrounding text.](images/bu-iac.svg){: caption="Figure 8. Accounts managed from the BU Administration Account" caption-side="bottom"}
+![Accounts that are managed from the BU administration account. All of the information is conveyed in the surrounding text.](images/bu-iac.svg){: caption="Accounts managed from the BU Administration Account" caption-side="bottom"}
 
 ### Authorization
 {: #authorization}
@@ -487,7 +487,7 @@ Centralizing management of deployable architectures and their configuration into
 The workload accounts contain the shared application hosting infrastructure, including a VPC, Red Hat OpenShift on IBM Cloud cluster or virtual server instances, observability services, and more. This application hosting infrastructure should be selected from one of the compliant deployable architectures that are supported by IBM or a custom extension of such an architecture. A good example is the [VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-slz-vpc-9fc0fa64-27af-4fed-9dce-47b3640ba739-global){: external}, but others can be found in the [IBM Cloud catalog](https://cloud.ibm.com/catalog#reference_architecture){: external} and in the [IBM Cloud Framework for Financial Services](/docs/framework-financial-services?topic=framework-financial-services-reference-architecture-overview) documentation.
 
 
-![Prod workload diagram. All of the information is conveyed in the surrounding text.](images/prod-workload.svg){: caption="Figure 9. Production workload account" caption-side="bottom"}
+![Prod workload diagram. All of the information is conveyed in the surrounding text.](images/prod-workload.svg){: caption="Production workload account" caption-side="bottom"}
 
 
 A single workload account contains a single VPC with one or more subnets. It is necessary to limit the number of VPCs and address prefixes to ensure that the transit gateway routing table size stays within limits as we scale the number of workload accounts (for more information, see [VPC addressing](/docs/solution-tutorials?topic=solution-tutorials-vpc-transit1#vpc-transit-ip-address-and-subnet-layout)).
@@ -503,7 +503,7 @@ If using the [VPC reference architecture for IBM Cloud for Financial Services](/
 | Infrastructure Trusted Profile | 1 | Authorizes management of this account and the shared infrastructure by a project in the BU administration account. |
 | Infrastructure operations access group | 1 | Access group to enable a BU DevOps team to monitor and manage the shared infrastructure |
 | Application operations access group | n | Access groups to enable applications teams to operate their development tools and monitor their app |
-{: caption="Table 12. Components" caption-side="bottom"}
+{: caption="Components" caption-side="bottom"}
 
 
 Additional Components not shown in the diagram:
@@ -514,9 +514,9 @@ Additional Components not shown in the diagram:
 | IBM Cloud Logging | 1 | Provides log monitoring for the infrastructure and services in the account |
 | IBM Cloud Monitoring | 1 | Provides performance and error monitoring for the infrastructure and services in the account |
 | Additional IBM Cloud Services | n | Any additional services (databases, watson, event streams, etc.) required to support the application workloads |
-{: caption="Table 13. Additional components" caption-side="bottom"}
+{: caption="Additional components" caption-side="bottom"}
 
-![Dev workload diagram. All of the information is conveyed in the surrounding text.](images/dev-workload.svg){: caption="Figure 10. Nonproduction workload account" caption-side="bottom"}
+![Dev workload diagram. All of the information is conveyed in the surrounding text.](images/dev-workload.svg){: caption="Nonproduction workload account" caption-side="bottom"}
 
 The nonproduction workload accounts contain the same shared application hosting infrastructure as the production workload account, although clusters can be scaled down to save cost. The nonproduction workload account also contains application development and test tools such as IBM Continuous Delivery Toolchains with their associated Git repos and CI/CD pipelines.
 
@@ -529,7 +529,7 @@ Additional components over the production workload account:
 | Application resource group | n | Contains application development infrastructure and services such as toolchains and evidence lockers. Only present in a development workload account. |
 | Application trusted profile | n | Authorizes management of an application resource group by a project in the BU administration account. Only present in a development workload account. |
 | Application operations access group | n | Access groups to enable applications teams to operate their development tools and monitor their app |
-{: caption="Table 14. Components" caption-side="bottom"}
+{: caption="Components" caption-side="bottom"}
 
 
 ### Rationale for shared application infrastructure
@@ -582,7 +582,7 @@ Consider the following items when you are using shared application infrastructur
 
 In addition to consuming existing infrastructure as code to create hub and workload accounts, organizations will need a set of accounts to develop, extend, and maintain any custom infrastructure as code.
 
-![IaC Accounts Diagram. All of the information is conveyed in the surrounding text.](images/iac-accounts.svg){: caption="Figure 11. Infrastructure as code development accounts" caption-side="bottom"}
+![IaC Accounts Diagram. All of the information is conveyed in the surrounding text.](images/iac-accounts.svg){: caption="Infrastructure as code development accounts" caption-side="bottom"}
 
 One account is used for deployable architecture development. This account contains infrastructure as code development tools such as toolchains, Git repos, and catalogs of infrastructure as code modules for use in development. It also includes a test catalog where test versions of the infrastructure as code are published to be used in a test project.
 
@@ -594,7 +594,7 @@ One account is used for deployable architecture development. This account contai
 | Development resource group | n | Contains the infrastructure as code development resources such as Git repos, toolchains, container registries, and evidence lockers for a single infrastructure as code development project |
 | Schematics agent | 1 | Used enable privately hosted custom deployable architectures in the private catalog. |
 | Schematics workspaces | n | Orchestrated by projects, used to deploy the deployable architectures and store terraform state. One workspace per configuration within each project. |
-{: caption="Table 15. IaC Tools Components" caption-side="bottom"}
+{: caption="IaC Tools Components" caption-side="bottom"}
 
 A second account is used for test deployments of the new infrastructure as code versions.
 
@@ -604,7 +604,7 @@ A second account is used for test deployments of the new infrastructure as code 
 | Infrastructure as code trusted profile | n | Authorizes management of this account by an infrastructure as code development project |
 | Test resource group | n | A resource group in which to deploy test resources for each cleanup.
 | Infrastructure as code access group | n | Access groups to enable infrastructure as code development teams to test the deployed infrastructure as code. Provides access to a test resource group (or groups if required by the deployable architecture). |
-{: caption="Table 16. IaC test components" caption-side="bottom"}
+{: caption="IaC test components" caption-side="bottom"}
 
 ### Sharing deployable architectures
 {: #share-da}
@@ -719,7 +719,7 @@ Services that provide built in backup facilities might have limitations regardin
 | Cloudant | Cloudant is a highly available NoSQL DB that can be configured with replicas in multiple regions. In addition, Cloudant backups can be taken by using the [CouchBackup](/docs/Cloudant?topic=Cloudant-ibm-cloudant-backup-and-recovery) client that uses customer-supplied automation. These backups should be stored in Cloud Object Storage in a alterative region and in the backup account as described in [Backup accounts](#accounts). |
 | Event Streams | Event Streams is a highly available Kafka as a service. Given the nature of eventing systems, point in time backups are likely of little value. However, [mirroring to a second region](/docs/EventStreams?topic=EventStreams-mirroring_setup) is recommended for disaster recovery. |
 | Other services | For more information on backups, see service-specific documentation. |
-{: caption="Table 17. Service-specific considerations" caption-side="bottom"}
+{: caption="Service-specific considerations" caption-side="bottom"}
 
 #### Related controls in IBM Cloud Framework for Financial Services
 {: #iac-controls}
@@ -733,4 +733,4 @@ The following [IBM Cloud Framework for Financial Services controls](/docs/framew
 | | [CP-7 Alternate Processing Site](/docs/framework-financial-services-controls?topic=framework-financial-services-controls-cp-7) |
 | | [CP-9 Information System Backup](/docs/framework-financial-services-controls?topic=framework-financial-services-controls-cp-9) |
 | | [CP-10 Information System Recovery and Reconstitution](/docs/framework-financial-services-controls?topic=framework-financial-services-controls-cp-10) |
-{: caption="Table 18. IBM Cloud Framework for Financial Services controls" caption-side="bottom"}
+{: caption="IBM Cloud Framework for Financial Services controls" caption-side="bottom"}
