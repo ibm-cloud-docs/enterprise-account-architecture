@@ -78,7 +78,7 @@ The two enterprise model increases separation between the nonproduction and prod
 
 Business unit account groups do not have to map directly to an enterprise's internal org structure. If needed, two or more smaller BUs can be placed in a single BU account group, or large BUs can be split into two. Beneath the BU layer, an optional layer of "portfolio" account groups can be used to further separate workloads and accounts to align with organizational needs.
 
-IBM Cloud has a limit of 300 account groups and 300 total accounts per enterprise.
+IBM Cloud has a limit of 500 account groups and 1000 total accounts per enterprise.
 {: note}
 
 ## Principles
