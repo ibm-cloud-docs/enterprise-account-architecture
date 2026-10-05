@@ -1,1 +1,237 @@
-<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1463.98 556.76"><defs><style>.cls-1,.cls-2,.cls-3,.cls-4,.cls-5{fill:none;}.cls-1,.cls-3,.cls-6,.cls-4,.cls-7,.cls-8,.cls-9,.cls-10,.cls-5{stroke-miterlimit:10;}.cls-1,.cls-3,.cls-6,.cls-4,.cls-7,.cls-9,.cls-10,.cls-5{stroke:#3553a4;}.cls-1,.cls-6{fill-rule:evenodd;}.cls-2,.cls-11,.cls-12{stroke-width:0px;}.cls-13{font-family:IBMPlexSans, 'IBM Plex Sans';font-size:14px;}.cls-13,.cls-14{fill:#010101;}.cls-3{stroke-dasharray:0 0 4 4;}.cls-6,.cls-7,.cls-12{fill:#fff;}.cls-4{stroke-dasharray:0 0 3.99 3.99;}.cls-8{stroke:#eef5fb;}.cls-8,.cls-9{fill:#eef4fb;}.cls-10,.cls-11{fill:#3553a4;}.cls-14{font-family:IBMPlexSans-SemiBold, 'IBM Plex Sans';font-size:16px;font-weight:600;}</style></defs><g id="Background"><rect class="cls-8" x="3.51" y=".5" width="1459.97" height="555.55"/><polyline class="cls-6" points="41.14 129.55 988.03 129.55 988.03 520.86"/><rect class="cls-11" y=".71" width="48" height="48"/><polygon class="cls-7" points="31.14 135.91 975.34 138.24 977.46 532.59 31.14 532.59 31.14 135.91"/><polyline class="cls-1" points="36.71 133.55 982.26 133.55 982.26 526.11"/><rect class="cls-11" x="31.14" y="135.91" width="48" height="48"/><rect class="cls-10" x=".51" y="48.71" width="3" height="507.55"/><polygon class="cls-7" points="411.93 57.99 632.13 58.27 632.62 105.99 411.93 105.99 411.93 57.99"/><rect class="cls-10" x="411.52" y="57.99" width="48" height="48"/><polygon class="cls-7" points="760.55 56.13 980.75 56.41 981.24 104.13 760.55 104.13 760.55 56.13"/><rect class="cls-10" x="760.14" y="56.13" width="48" height="48"/><rect id="_Transparent_Rectangle_" class="cls-2" x="766.77" y="64.13" width="32" height="32"/><path class="cls-12" d="m431.92,94.65h-5v-4h2v-2h-2v-5h2v-2h-2v-5h2v-2h-2v-4h18v16h2v-16c0-1.1-.9-2-2-2h-18c-1.1,0-2,.9-2,2v4h-2v2h2v5h-2v2h2v5h-2v2h2v4c0,1.1.9,2,2,2h5v-2Z"/><path class="cls-12" d="m439.92,93.22h-5c-.55,0-1-.45-1-1v-5c0-.55.45-1,1-1h5c.55,0,1,.45,1,1v5c0,.55-.45,1-1,1Zm-5-6v5h5v-5h-5Z"/><path class="cls-12" d="m444.92,90.22v2h-2v-2h2m0-1h-2c-.55,0-1,.45-1,1v2c0,.55.45,1,1,1h2c.55,0,1-.45,1-1v-2c0-.55-.45-1-1-1Z"/><path class="cls-12" d="m444.92,95.22v2h-2v-2h2m0-1h-2c-.55,0-1,.45-1,1v2c0,.55.45,1,1,1h2c.55,0,1-.45,1-1v-2c0-.55-.45-1-1-1Z"/><path class="cls-12" d="m439.92,95.22v2h-2v-2h2m0-1h-2c-.55,0-1,.45-1,1v2c0,.55.45,1,1,1h2c.55,0,1-.45,1-1v-2c0-.55-.45-1-1-1Z"/><path class="cls-12" d="m781.14,91.56h-5v-4h2v-2h-2v-5h2v-2h-2v-5h2v-2h-2v-4h18v16h2v-16c0-1.1-.9-2-2-2h-18c-1.1,0-2,.9-2,2v4h-2v2h2v5h-2v2h2v5h-2v2h2v4c0,1.1.9,2,2,2h5v-2Z"/><rect class="cls-12" x="782.77" y="83.34" width="10" height="2"/><rect class="cls-12" x="782.77" y="87.34" width="10" height="2"/><rect class="cls-12" x="782.77" y="91.34" width="10" height="2"/><path class="cls-12" d="m16.77,22.25h10.97v2.04h-10.97v-2.04Zm0,5.09h12.97v2.04h-12.97v-2.04Z"/><path class="cls-12" d="m36.71,12.07H12.78c-1.1,0-1.99.91-1.99,2.04v20.36c0,1.12.89,2.04,1.99,2.04h23.94c1.1,0,1.99-.91,1.99-2.04V14.1c0-1.12-.89-2.04-1.99-2.04Zm0,2.04v2.04H12.78v-2.04h23.94Zm-23.94,20.36v-16.28h23.94v16.28H12.78Z"/><path class="cls-12" d="m47.14,147.63v4h-4v-4h4Zm2-2h-8v8h8v-8Zm8,2v4h-4v-4h4Zm2-2h-8v8h8v-8Zm8,2v4h-4v-4h4Zm2-2h-8v8h8v-8Zm-22,12v4h-4v-4h4Zm2-2h-8v8h8v-8Zm8,2v4h-4v-4h4Zm2-2h-8v8h8v-8Zm8,2v4h-4v-4h4Zm2-2h-8v8h8v-8Zm-22,12v4h-4v-4h4Zm2-2h-8v8h8v-8Zm8,2v4h-4v-4h4Zm2-2h-8v8h8v-8Zm8,2v4h-4v-4h4Zm2-2h-8v8h8v-8Z"/><polyline class="cls-1" points="63.11 198.55 493.52 198.55 493.52 510.9"/><polyline class="cls-1" points="67.83 194.55 497.52 194.55 497.52 506.38"/><rect class="cls-9" x="537.43" y="200.93" width="426.76" height="309.97"/><rect class="cls-11" x="537.35" y="200.93" width="48" height="48"/><path class="cls-12" d="m556.52,214.93l3.42,3.41.58.59h12.83v16h-24v-20h7.17m0-2h-7.17c-1.1,0-2,.9-2,2v20c0,1.1.9,2,2,2h24c1.1,0,2-.9,2-2v-16c0-1.1-.9-2-2-2h-12l-3.41-3.41c-.38-.38-.89-.59-1.42-.59Z"/><polygon class="cls-7" points="555.11 383.23 953.07 383.75 953.17 498.17 555.22 497.65 555.11 383.23"/><rect class="cls-9" x="555.01" y="383.22" width="48" height="48"/><rect class="cls-12" x="565.43" y="440.52" width="183.71" height="48"/><polyline class="cls-5" points="749.14 486.52 749.14 488.52 747.14 488.52"/><line class="cls-4" x1="743.15" y1="488.52" x2="569.43" y2="488.52"/><polyline class="cls-5" points="567.43 488.52 565.43 488.52 565.43 486.52"/><line class="cls-3" x1="565.43" y1="482.52" x2="565.43" y2="444.52"/><polyline class="cls-5" points="565.43 442.52 565.43 440.52 567.43 440.52"/><line class="cls-4" x1="571.43" y1="440.52" x2="745.14" y2="440.52"/><polyline class="cls-5" points="747.14 440.52 749.14 440.52 749.14 442.52"/><line class="cls-3" x1="749.14" y1="446.52" x2="749.14" y2="484.52"/><rect class="cls-10" x="564.52" y="440.52" width="3" height="48"/><rect class="cls-12" x="759.31" y="440.52" width="183.71" height="48"/><polyline class="cls-5" points="943.02 486.52 943.02 488.52 941.02 488.52"/><line class="cls-4" x1="937.03" y1="488.52" x2="763.31" y2="488.52"/><polyline class="cls-5" points="761.31 488.52 759.31 488.52 759.31 486.52"/><line class="cls-3" x1="759.31" y1="482.52" x2="759.31" y2="444.52"/><polyline class="cls-5" points="759.31 442.52 759.31 440.52 761.31 440.52"/><line class="cls-4" x1="765.31" y1="440.52" x2="939.02" y2="440.52"/><polyline class="cls-5" points="941.02 440.52 943.02 440.52 943.02 442.52"/><line class="cls-3" x1="943.02" y1="446.52" x2="943.02" y2="484.52"/><rect class="cls-10" x="758.57" y="440.52" width="3" height="48"/><polygon class="cls-7" points="554.52 258.61 952.48 259.13 952.58 373.55 554.63 373.02 554.52 258.61"/><rect class="cls-9" x="554.42" y="258.6" width="48" height="48"/><rect class="cls-12" x="564.85" y="315.9" width="183.71" height="48"/><polyline class="cls-5" points="748.55 361.9 748.55 363.9 746.55 363.9"/><line class="cls-4" x1="742.56" y1="363.9" x2="568.84" y2="363.9"/><polyline class="cls-5" points="566.85 363.9 564.85 363.9 564.85 361.9"/><line class="cls-3" x1="564.85" y1="357.9" x2="564.85" y2="319.9"/><polyline class="cls-5" points="564.85 317.9 564.85 315.9 566.85 315.9"/><line class="cls-4" x1="570.84" y1="315.9" x2="744.55" y2="315.9"/><polyline class="cls-5" points="746.55 315.9 748.55 315.9 748.55 317.9"/><line class="cls-3" x1="748.55" y1="321.9" x2="748.55" y2="359.9"/><rect class="cls-10" x="563.93" y="315.9" width="3" height="48"/><rect class="cls-12" x="758.72" y="315.9" width="183.71" height="48"/><polyline class="cls-5" points="942.43 361.9 942.43 363.9 940.43 363.9"/><line class="cls-4" x1="936.44" y1="363.9" x2="762.72" y2="363.9"/><polyline class="cls-5" points="760.72 363.9 758.72 363.9 758.72 361.9"/><line class="cls-3" x1="758.72" y1="357.9" x2="758.72" y2="319.9"/><polyline class="cls-5" points="758.72 317.9 758.72 315.9 760.72 315.9"/><line class="cls-4" x1="764.72" y1="315.9" x2="938.43" y2="315.9"/><polyline class="cls-5" points="940.43 315.9 942.43 315.9 942.43 317.9"/><line class="cls-3" x1="942.43" y1="321.9" x2="942.43" y2="359.9"/><rect class="cls-10" x="757.98" y="315.9" width="3" height="48"/><rect class="cls-9" x="60.89" y="204.78" width="426.76" height="309.97"/><rect class="cls-11" x="60.82" y="204.78" width="48" height="48"/><path class="cls-12" d="m79.99,218.78l3.42,3.41.58.59h12.83v16h-24v-20h7.17m0-2h-7.17c-1.1,0-2,.9-2,2v20c0,1.1.9,2,2,2h24c1.1,0,2-.9,2-2v-16c0-1.1-.9-2-2-2h-12l-3.41-3.41c-.38-.38-.89-.59-1.42-.59Z"/><polygon class="cls-7" points="78.58 387.08 476.54 387.61 476.64 502.03 78.69 501.5 78.58 387.08"/><rect class="cls-9" x="78.48" y="387.08" width="48" height="48"/><rect class="cls-12" x="88.9" y="444.37" width="183.71" height="48"/><polyline class="cls-5" points="272.61 490.37 272.61 492.37 270.61 492.37"/><line class="cls-4" x1="266.62" y1="492.37" x2="92.9" y2="492.37"/><polyline class="cls-5" points="90.9 492.37 88.9 492.37 88.9 490.37"/><line class="cls-3" x1="88.9" y1="486.37" x2="88.9" y2="448.37"/><polyline class="cls-5" points="88.9 446.37 88.9 444.37 90.9 444.37"/><line class="cls-4" x1="94.9" y1="444.37" x2="268.61" y2="444.37"/><polyline class="cls-5" points="270.61 444.37 272.61 444.37 272.61 446.37"/><line class="cls-3" x1="272.61" y1="450.37" x2="272.61" y2="488.37"/><rect class="cls-10" x="87.99" y="444.37" width="3" height="48"/><rect class="cls-12" x="282.78" y="444.37" width="183.71" height="48"/><polyline class="cls-5" points="466.49 490.37 466.49 492.37 464.49 492.37"/><line class="cls-4" x1="460.49" y1="492.37" x2="286.78" y2="492.37"/><polyline class="cls-5" points="284.78 492.37 282.78 492.37 282.78 490.37"/><line class="cls-3" x1="282.78" y1="486.37" x2="282.78" y2="448.37"/><polyline class="cls-5" points="282.78 446.37 282.78 444.37 284.78 444.37"/><line class="cls-4" x1="288.78" y1="444.37" x2="462.49" y2="444.37"/><polyline class="cls-5" points="464.49 444.37 466.49 444.37 466.49 446.37"/><line class="cls-3" x1="466.49" y1="450.37" x2="466.49" y2="488.37"/><rect class="cls-10" x="282.04" y="444.37" width="3" height="48"/><polygon class="cls-7" points="77.99 262.46 475.95 262.98 476.05 377.4 78.1 376.88 77.99 262.46"/><rect class="cls-9" x="77.89" y="262.45" width="48" height="48"/><rect class="cls-12" x="88.31" y="319.75" width="183.71" height="48"/><polyline class="cls-5" points="272.02 365.75 272.02 367.75 270.02 367.75"/><line class="cls-4" x1="266.03" y1="367.75" x2="92.31" y2="367.75"/><polyline class="cls-5" points="90.31 367.75 88.31 367.75 88.31 365.75"/><line class="cls-3" x1="88.31" y1="361.75" x2="88.31" y2="323.75"/><polyline class="cls-5" points="88.31 321.75 88.31 319.75 90.31 319.75"/><line class="cls-4" x1="94.31" y1="319.75" x2="268.02" y2="319.75"/><polyline class="cls-5" points="270.02 319.75 272.02 319.75 272.02 321.75"/><line class="cls-3" x1="272.02" y1="325.75" x2="272.02" y2="363.75"/><rect class="cls-10" x="87.4" y="319.75" width="3" height="48"/><path class="cls-11" d="m92.9,282.35h10.97v2.04h-10.97v-2.04Zm0,5.09h12.97v2.04h-12.97v-2.04Z"/><path class="cls-11" d="m112.85,272.17h-23.94c-1.1,0-1.99.91-1.99,2.04v20.36c0,1.12.89,2.04,1.99,2.04h23.94c1.1,0,1.99-.91,1.99-2.04v-20.36c0-1.12-.89-2.04-1.99-2.04Zm0,2.04v2.04h-23.94v-2.04h23.94Zm-23.94,20.36v-16.28h23.94v16.28h-23.94Z"/><path class="cls-11" d="m92.9,408.28h10.97v2.04h-10.97v-2.04Zm0,5.09h12.97v2.04h-12.97v-2.04Z"/><path class="cls-11" d="m112.85,398.1h-23.94c-1.1,0-1.99.91-1.99,2.04v20.36c0,1.12.89,2.04,1.99,2.04h23.94c1.1,0,1.99-.91,1.99-2.04v-20.36c0-1.12-.89-2.04-1.99-2.04Zm0,2.04v2.04h-23.94v-2.04h23.94Zm-23.94,20.36v-16.28h23.94v16.28h-23.94Z"/><path class="cls-11" d="m569.83,406.28h10.97v2.04h-10.97v-2.04Zm0,5.09h12.97v2.04h-12.97v-2.04Z"/><path class="cls-11" d="m589.77,396.1h-23.94c-1.1,0-1.99.91-1.99,2.04v20.36c0,1.12.89,2.04,1.99,2.04h23.94c1.1,0,1.99-.91,1.99-2.04v-20.36c0-1.12-.89-2.04-1.99-2.04Zm0,2.04v2.04h-23.94v-2.04h23.94Zm-23.94,20.36v-16.28h23.94v16.28h-23.94Z"/><path class="cls-11" d="m569.83,280.35h10.97v2.04h-10.97v-2.04Zm0,5.09h12.97v2.04h-12.97v-2.04Z"/><path class="cls-11" d="m589.77,270.17h-23.94c-1.1,0-1.99.91-1.99,2.04v20.36c0,1.12.89,2.04,1.99,2.04h23.94c1.1,0,1.99-.91,1.99-2.04v-20.36c0-1.12-.89-2.04-1.99-2.04Zm0,2.04v2.04h-23.94v-2.04h23.94Zm-23.94,20.36v-16.28h23.94v16.28h-23.94Z"/></g><g id="Text"><text class="cls-14" transform="translate(56.4 33.12)"><tspan x="0" y="0">Business unit administration account </tspan></text><text class="cls-13" transform="translate(86.56 166.8)"><tspan x="0" y="0">Application - infrastructure sets</tspan></text><text class="cls-13" transform="translate(466.68 87.02)"><tspan x="0" y="0">Application catalog</tspan></text><text class="cls-13" transform="translate(815.3 85.05)"><tspan x="0" y="0">Infrastructure catalog</tspan></text><text class="cls-13" transform="translate(593.43 229.28)"><tspan x="0" y="0">Shared infrastructure project</tspan></text><text class="cls-13" transform="translate(607.42 411.63)"><tspan x="0" y="0">Prod environment - production account</tspan></text><text class="cls-13" transform="translate(578 469.57)"><tspan x="0" y="0">Prod infrastructure</tspan></text><text class="cls-13" transform="translate(771.14 469.2)"><tspan x="0" y="0">App onboarding</tspan></text><text class="cls-13" transform="translate(606.83 287)"><tspan x="0" y="0">Dev environment - development account</tspan></text><text class="cls-13" transform="translate(577.41 344.95)"><tspan x="0" y="0">Dev infrastructure</tspan></text><text class="cls-13" transform="translate(770.55 344.57)"><tspan x="0" y="0">App onboarding</tspan></text><text class="cls-13" transform="translate(116.89 233.14)"><tspan x="0" y="0">Application development project</tspan></text><text class="cls-13" transform="translate(130.89 415.48)"><tspan x="0" y="0">Infrastructure onboard - projects in admin account</tspan></text><text class="cls-13" transform="translate(101.47 473.43)"><tspan x="0" y="0">Dev infra onboard</tspan></text><text class="cls-13" transform="translate(294.61 473.05)"><tspan x="0" y="0">Prod infra onboard</tspan></text><text class="cls-13" transform="translate(130.3 290.86)"><tspan x="0" y="0">Network and services - development account</tspan></text><text class="cls-13" transform="translate(100.88 348.8)"><tspan x="0" y="0">Development tools</tspan></text><rect class="cls-9" x="1017.27" y="199.74" width="426.76" height="309.97"/><rect class="cls-11" x="1016.19" y="199.74" width="48" height="48"/><text class="cls-13" transform="translate(1073.27 228.1)"><tspan x="0" y="0">Infrastructure as code development project</tspan></text><path class="cls-12" d="m1035.36,212.78l3.42,3.41.58.59h12.83v16h-24v-20h7.17m0-2h-7.17c-1.1,0-2,.9-2,2v20c0,1.1.9,2,2,2h24c1.1,0,2-.9,2-2v-16c0-1.1-.9-2-2-2h-12l-3.41-3.41c-.38-.38-.89-.59-1.42-.59Z"/><polygon class="cls-7" points="1036.17 258.43 1434.13 258.95 1434.24 373.37 1036.28 372.85 1036.17 258.43"/><rect class="cls-9" x="1036.07" y="258.42" width="48" height="48"/><path class="cls-11" d="m1051.48,280.17h10.97v2.04h-10.97v-2.04Zm0,5.09h12.97v2.04h-12.97v-2.04Z"/><path class="cls-11" d="m1071.42,269.99h-23.94c-1.1,0-1.99.91-1.99,2.04v20.36c0,1.12.89,2.04,1.99,2.04h23.94c1.1,0,1.99-.91,1.99-2.04v-20.36c0-1.12-.89-2.04-1.99-2.04Zm0,2.04v2.04h-23.94v-2.04h23.94Zm-23.94,20.36v-16.28h23.94v16.28h-23.94Z"/><text class="cls-13" transform="translate(1088.48 286.83)"><tspan x="0" y="0">Infrastructure as code - development account</tspan></text><polygon class="cls-7" points="1036.23 383.05 1434.18 383.57 1434.29 497.99 1036.33 497.47 1036.23 383.05"/><rect class="cls-9" x="1036.12" y="383.04" width="48" height="48"/><path class="cls-11" d="m1050.94,406.1h10.97v2.04h-10.97v-2.04Zm0,5.09h12.97v2.04h-12.97v-2.04Z"/><path class="cls-11" d="m1070.89,395.92h-23.94c-1.1,0-1.99.91-1.99,2.04v20.36c0,1.12.89,2.04,1.99,2.04h23.94c1.1,0,1.99-.91,1.99-2.04v-20.36c0-1.12-.89-2.04-1.99-2.04Zm0,2.04v2.04h-23.94v-2.04h23.94Zm-23.94,20.36v-16.28h23.94v16.28h-23.94Z"/><text class="cls-13" transform="translate(1088.53 411.45)"><tspan x="0" y="0">Infrastructure as code - test account</tspan></text></g></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1463.98 556.76">
+  <!-- Generator: Adobe Illustrator 29.8.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 2)  -->
+  <defs>
+    <style>
+      .st0, .st1, .st2, .st3 {
+        fill: none;
+      }
+
+      .st4 {
+        font-family: IBMPlexSans, 'IBM Plex Sans';
+        font-size: 14px;
+      }
+
+      .st4, .st5, .st6 {
+        isolation: isolate;
+      }
+
+      .st4, .st6 {
+        fill: #010101;
+      }
+
+      .st7 {
+        stroke: #eef5fb;
+      }
+
+      .st7, .st8, .st1, .st9, .st10, .st11, .st2, .st3 {
+        stroke-miterlimit: 10;
+      }
+
+      .st7, .st9 {
+        fill: #eef4fb;
+      }
+
+      .st8, .st1, .st9, .st10, .st11, .st2, .st3 {
+        stroke: #3553a4;
+      }
+
+      .st8, .st10, .st12 {
+        fill: #fff;
+      }
+
+      .st1 {
+        stroke-dasharray: 0 0 3.99 3.99;
+      }
+
+      .st10 {
+        fill-rule: evenodd;
+      }
+
+      .st11, .st13 {
+        fill: #3553a4;
+      }
+
+      .st2 {
+        stroke-dasharray: 0 0 4 4;
+      }
+
+      .st6 {
+        font-family: IBMPlexSans-SemiBold, 'IBM Plex Sans';
+        font-size: 16px;
+        font-weight: 600;
+      }
+    </style>
+  </defs>
+  <g id="Background">
+    <rect class="st7" x="3.51" y=".5" width="1459.97" height="555.55"/>
+    <polyline class="st10" points="41.14 129.55 988.03 129.55 988.03 520.86"/>
+    <rect class="st13" y=".71" width="48" height="48"/>
+    <polygon class="st8" points="31.14 135.91 975.34 138.24 977.46 532.59 31.14 532.59 31.14 135.91"/>
+    <polyline class="st3" points="36.71 133.55 982.26 133.55 982.26 526.11"/>
+    <rect class="st13" x="31.14" y="135.91" width="48" height="48"/>
+    <rect class="st11" x=".51" y="48.71" width="3" height="507.55"/>
+    <polygon class="st8" points="411.93 57.99 632.13 58.27 632.62 105.99 411.93 105.99 411.93 57.99"/>
+    <rect class="st11" x="411.52" y="57.99" width="48" height="48"/>
+    <polygon class="st8" points="760.55 56.13 980.75 56.41 981.24 104.13 760.55 104.13 760.55 56.13"/>
+    <rect class="st11" x="760.14" y="56.13" width="48" height="48"/>
+    <rect id="_Transparent_Rectangle_" class="st0" x="766.77" y="64.13" width="32" height="32"/>
+    <path class="st12" d="M431.92,94.65h-5v-4h2v-2h-2v-5h2v-2h-2v-5h2v-2h-2v-4h18v16h2v-16c0-1.1-.9-2-2-2h-18c-1.1,0-2,.9-2,2v4h-2v2h2v5h-2v2h2v5h-2v2h2v4c0,1.1.9,2,2,2h5v-2Z"/>
+    <path class="st12" d="M439.92,93.22h-5c-.55,0-1-.45-1-1v-5c0-.55.45-1,1-1h5c.55,0,1,.45,1,1v5c0,.55-.45,1-1,1ZM434.92,87.22v5h5v-5h-5Z"/>
+    <path class="st12" d="M444.92,90.22v2h-2v-2h2M444.92,89.22h-2c-.55,0-1,.45-1,1v2c0,.55.45,1,1,1h2c.55,0,1-.45,1-1v-2c0-.55-.45-1-1-1Z"/>
+    <path class="st12" d="M444.92,95.22v2h-2v-2h2M444.92,94.22h-2c-.55,0-1,.45-1,1v2c0,.55.45,1,1,1h2c.55,0,1-.45,1-1v-2c0-.55-.45-1-1-1Z"/>
+    <path class="st12" d="M439.92,95.22v2h-2v-2h2M439.92,94.22h-2c-.55,0-1,.45-1,1v2c0,.55.45,1,1,1h2c.55,0,1-.45,1-1v-2c0-.55-.45-1-1-1Z"/>
+    <path class="st12" d="M781.14,91.56h-5v-4h2v-2h-2v-5h2v-2h-2v-5h2v-2h-2v-4h18v16h2v-16c0-1.1-.9-2-2-2h-18c-1.1,0-2,.9-2,2v4h-2v2h2v5h-2v2h2v5h-2v2h2v4c0,1.1.9,2,2,2h5v-2Z"/>
+    <rect class="st12" x="782.77" y="83.34" width="10" height="2"/>
+    <rect class="st12" x="782.77" y="87.34" width="10" height="2"/>
+    <rect class="st12" x="782.77" y="91.34" width="10" height="2"/>
+    <path class="st12" d="M16.77,22.25h10.97v2.04h-10.97v-2.04ZM16.77,27.34h12.97v2.04h-12.97v-2.04Z"/>
+    <path class="st12" d="M36.71,12.07H12.78c-1.1,0-1.99.91-1.99,2.04v20.36c0,1.12.89,2.04,1.99,2.04h23.94c1.1,0,1.99-.91,1.99-2.04V14.1c0-1.12-.89-2.04-1.99-2.04h-.01ZM36.71,14.11v2.04H12.78v-2.04h23.94-.01ZM12.77,34.47v-16.28h23.94v16.28H12.77Z"/>
+    <path class="st12" d="M47.14,147.63v4h-4v-4h4ZM49.14,145.63h-8v8h8v-8ZM57.14,147.63v4h-4v-4h4ZM59.14,145.63h-8v8h8v-8ZM67.14,147.63v4h-4v-4h4ZM69.14,145.63h-8v8h8v-8ZM47.14,157.63v4h-4v-4h4ZM49.14,155.63h-8v8h8v-8ZM57.14,157.63v4h-4v-4h4ZM59.14,155.63h-8v8h8v-8ZM67.14,157.63v4h-4v-4h4ZM69.14,155.63h-8v8h8v-8ZM47.14,167.63v4h-4v-4h4ZM49.14,165.63h-8v8h8v-8ZM57.14,167.63v4h-4v-4h4ZM59.14,165.63h-8v8h8v-8ZM67.14,167.63v4h-4v-4h4ZM69.14,165.63h-8v8h8v-8Z"/>
+    <polyline class="st3" points="63.11 198.55 493.52 198.55 493.52 510.9"/>
+    <polyline class="st3" points="67.83 194.55 497.52 194.55 497.52 506.38"/>
+    <rect class="st9" x="537.43" y="200.93" width="426.76" height="309.97"/>
+    <rect class="st13" x="537.35" y="200.93" width="48" height="48"/>
+    <path class="st12" d="M556.52,214.93l3.42,3.41.58.59h12.83v16h-24v-20h7.17M556.52,212.93h-7.17c-1.1,0-2,.9-2,2v20c0,1.1.9,2,2,2h24c1.1,0,2-.9,2-2v-16c0-1.1-.9-2-2-2h-12l-3.41-3.41c-.38-.38-.89-.59-1.42-.59h0Z"/>
+    <polygon class="st8" points="555.11 383.23 953.07 383.75 953.17 498.17 555.22 497.65 555.11 383.23"/>
+    <rect class="st9" x="555.01" y="383.22" width="48" height="48"/>
+    <rect class="st12" x="565.43" y="440.52" width="183.71" height="48"/>
+    <polyline class="st3" points="749.14 486.52 749.14 488.52 747.14 488.52"/>
+    <line class="st1" x1="743.15" y1="488.52" x2="569.43" y2="488.52"/>
+    <polyline class="st3" points="567.43 488.52 565.43 488.52 565.43 486.52"/>
+    <line class="st2" x1="565.43" y1="482.52" x2="565.43" y2="444.52"/>
+    <polyline class="st3" points="565.43 442.52 565.43 440.52 567.43 440.52"/>
+    <line class="st1" x1="571.43" y1="440.52" x2="745.14" y2="440.52"/>
+    <polyline class="st3" points="747.14 440.52 749.14 440.52 749.14 442.52"/>
+    <line class="st2" x1="749.14" y1="446.52" x2="749.14" y2="484.52"/>
+    <rect class="st11" x="564.52" y="440.52" width="3" height="48"/>
+    <rect class="st12" x="759.31" y="440.52" width="183.71" height="48"/>
+    <polyline class="st3" points="943.02 486.52 943.02 488.52 941.02 488.52"/>
+    <line class="st1" x1="937.03" y1="488.52" x2="763.31" y2="488.52"/>
+    <polyline class="st3" points="761.31 488.52 759.31 488.52 759.31 486.52"/>
+    <line class="st2" x1="759.31" y1="482.52" x2="759.31" y2="444.52"/>
+    <polyline class="st3" points="759.31 442.52 759.31 440.52 761.31 440.52"/>
+    <line class="st1" x1="765.31" y1="440.52" x2="939.02" y2="440.52"/>
+    <polyline class="st3" points="941.02 440.52 943.02 440.52 943.02 442.52"/>
+    <line class="st2" x1="943.02" y1="446.52" x2="943.02" y2="484.52"/>
+    <rect class="st11" x="758.57" y="440.52" width="3" height="48"/>
+    <polygon class="st8" points="554.52 258.61 952.48 259.13 952.58 373.55 554.63 373.02 554.52 258.61"/>
+    <rect class="st9" x="554.42" y="258.6" width="48" height="48"/>
+    <rect class="st12" x="564.85" y="315.9" width="183.71" height="48"/>
+    <polyline class="st3" points="748.55 361.9 748.55 363.9 746.55 363.9"/>
+    <line class="st1" x1="742.56" y1="363.9" x2="568.84" y2="363.9"/>
+    <polyline class="st3" points="566.85 363.9 564.85 363.9 564.85 361.9"/>
+    <line class="st2" x1="564.85" y1="357.9" x2="564.85" y2="319.9"/>
+    <polyline class="st3" points="564.85 317.9 564.85 315.9 566.85 315.9"/>
+    <line class="st1" x1="570.84" y1="315.9" x2="744.55" y2="315.9"/>
+    <polyline class="st3" points="746.55 315.9 748.55 315.9 748.55 317.9"/>
+    <line class="st2" x1="748.55" y1="321.9" x2="748.55" y2="359.9"/>
+    <rect class="st11" x="563.93" y="315.9" width="3" height="48"/>
+    <rect class="st12" x="758.72" y="315.9" width="183.71" height="48"/>
+    <polyline class="st3" points="942.43 361.9 942.43 363.9 940.43 363.9"/>
+    <line class="st1" x1="936.44" y1="363.9" x2="762.72" y2="363.9"/>
+    <polyline class="st3" points="760.72 363.9 758.72 363.9 758.72 361.9"/>
+    <line class="st2" x1="758.72" y1="357.9" x2="758.72" y2="319.9"/>
+    <polyline class="st3" points="758.72 317.9 758.72 315.9 760.72 315.9"/>
+    <line class="st1" x1="764.72" y1="315.9" x2="938.43" y2="315.9"/>
+    <polyline class="st3" points="940.43 315.9 942.43 315.9 942.43 317.9"/>
+    <line class="st2" x1="942.43" y1="321.9" x2="942.43" y2="359.9"/>
+    <rect class="st11" x="757.98" y="315.9" width="3" height="48"/>
+    <rect class="st9" x="60.89" y="204.78" width="426.76" height="309.97"/>
+    <rect class="st13" x="60.82" y="204.78" width="48" height="48"/>
+    <path class="st12" d="M79.99,218.78l3.42,3.41.58.59h12.83v16h-24v-20h7.17M79.99,216.78h-7.17c-1.1,0-2,.9-2,2v20c0,1.1.9,2,2,2h24c1.1,0,2-.9,2-2v-16c0-1.1-.9-2-2-2h-12l-3.41-3.41c-.38-.38-.89-.59-1.42-.59Z"/>
+    <polygon class="st8" points="78.58 387.08 476.54 387.61 476.64 502.03 78.69 501.5 78.58 387.08"/>
+    <rect class="st9" x="78.48" y="387.08" width="48" height="48"/>
+    <rect class="st12" x="88.9" y="444.37" width="183.71" height="48"/>
+    <polyline class="st3" points="272.61 490.37 272.61 492.37 270.61 492.37"/>
+    <line class="st1" x1="266.62" y1="492.37" x2="92.9" y2="492.37"/>
+    <polyline class="st3" points="90.9 492.37 88.9 492.37 88.9 490.37"/>
+    <line class="st2" x1="88.9" y1="486.37" x2="88.9" y2="448.37"/>
+    <polyline class="st3" points="88.9 446.37 88.9 444.37 90.9 444.37"/>
+    <line class="st1" x1="94.9" y1="444.37" x2="268.61" y2="444.37"/>
+    <polyline class="st3" points="270.61 444.37 272.61 444.37 272.61 446.37"/>
+    <line class="st2" x1="272.61" y1="450.37" x2="272.61" y2="488.37"/>
+    <rect class="st11" x="87.99" y="444.37" width="3" height="48"/>
+    <rect class="st12" x="282.78" y="444.37" width="183.71" height="48"/>
+    <polyline class="st3" points="466.49 490.37 466.49 492.37 464.49 492.37"/>
+    <line class="st1" x1="460.49" y1="492.37" x2="286.78" y2="492.37"/>
+    <polyline class="st3" points="284.78 492.37 282.78 492.37 282.78 490.37"/>
+    <line class="st2" x1="282.78" y1="486.37" x2="282.78" y2="448.37"/>
+    <polyline class="st3" points="282.78 446.37 282.78 444.37 284.78 444.37"/>
+    <line class="st1" x1="288.78" y1="444.37" x2="462.49" y2="444.37"/>
+    <polyline class="st3" points="464.49 444.37 466.49 444.37 466.49 446.37"/>
+    <line class="st2" x1="466.49" y1="450.37" x2="466.49" y2="488.37"/>
+    <rect class="st11" x="282.04" y="444.37" width="3" height="48"/>
+    <polygon class="st8" points="77.99 262.46 475.95 262.98 476.05 377.4 78.1 376.88 77.99 262.46"/>
+    <rect class="st9" x="77.89" y="262.45" width="48" height="48"/>
+    <rect class="st12" x="88.31" y="319.75" width="183.71" height="48"/>
+    <polyline class="st3" points="272.02 365.75 272.02 367.75 270.02 367.75"/>
+    <line class="st1" x1="266.03" y1="367.75" x2="92.31" y2="367.75"/>
+    <polyline class="st3" points="90.31 367.75 88.31 367.75 88.31 365.75"/>
+    <line class="st2" x1="88.31" y1="361.75" x2="88.31" y2="323.75"/>
+    <polyline class="st3" points="88.31 321.75 88.31 319.75 90.31 319.75"/>
+    <line class="st1" x1="94.31" y1="319.75" x2="268.02" y2="319.75"/>
+    <polyline class="st3" points="270.02 319.75 272.02 319.75 272.02 321.75"/>
+    <line class="st2" x1="272.02" y1="325.75" x2="272.02" y2="363.75"/>
+    <rect class="st11" x="87.4" y="319.75" width="3" height="48"/>
+    <path class="st13" d="M92.9,282.35h10.97v2.04h-10.97v-2.04ZM92.9,287.44h12.97v2.04h-12.97v-2.04Z"/>
+    <path class="st13" d="M112.85,272.17h-23.94c-1.1,0-1.99.91-1.99,2.04v20.36c0,1.12.89,2.04,1.99,2.04h23.94c1.1,0,1.99-.91,1.99-2.04v-20.36c0-1.12-.89-2.04-1.99-2.04ZM112.85,274.21v2.04h-23.94v-2.04h23.94ZM88.91,294.57v-16.28h23.94v16.28h-23.94Z"/>
+    <path class="st13" d="M92.9,408.28h10.97v2.04h-10.97v-2.04ZM92.9,413.37h12.97v2.04h-12.97v-2.04Z"/>
+    <path class="st13" d="M112.85,398.1h-23.94c-1.1,0-1.99.91-1.99,2.04v20.36c0,1.12.89,2.04,1.99,2.04h23.94c1.1,0,1.99-.91,1.99-2.04v-20.36c0-1.12-.89-2.04-1.99-2.04ZM112.85,400.14v2.04h-23.94v-2.04h23.94ZM88.91,420.5v-16.28h23.94v16.28h-23.94Z"/>
+    <path class="st13" d="M569.83,406.28h10.97v2.04h-10.97v-2.04ZM569.83,411.37h12.97v2.04h-12.97v-2.04Z"/>
+    <path class="st13" d="M589.77,396.1h-23.94c-1.1,0-1.99.91-1.99,2.04v20.36c0,1.12.89,2.04,1.99,2.04h23.94c1.1,0,1.99-.91,1.99-2.04v-20.36c0-1.12-.89-2.04-1.99-2.04ZM589.77,398.14v2.04h-23.94v-2.04h23.94ZM565.83,418.5v-16.28h23.94v16.28h-23.94Z"/>
+    <path class="st13" d="M569.83,280.35h10.97v2.04h-10.97v-2.04ZM569.83,285.44h12.97v2.04h-12.97v-2.04Z"/>
+    <path class="st13" d="M589.77,270.17h-23.94c-1.1,0-1.99.91-1.99,2.04v20.36c0,1.12.89,2.04,1.99,2.04h23.94c1.1,0,1.99-.91,1.99-2.04v-20.36c0-1.12-.89-2.04-1.99-2.04ZM589.77,272.21v2.04h-23.94v-2.04h23.94ZM565.83,292.57v-16.28h23.94v16.28h-23.94Z"/>
+  </g>
+  <g class="st5">
+    <text class="st6" transform="translate(56.4 33.12)"><tspan x="0" y="0">Business unit administration account</tspan></text>
+  </g>
+  <g class="st5">
+    <text class="st4" transform="translate(86.56 166.8)"><tspan x="0" y="0">Application - infrastructure sets</tspan></text>
+  </g>
+  <g class="st5">
+    <text class="st4" transform="translate(466.68 87.02)"><tspan x="0" y="0">Application catalog</tspan></text>
+  </g>
+  <g class="st5">
+    <text class="st4" transform="translate(815.3 85.05)"><tspan x="0" y="0">Infrastructure catalog</tspan></text>
+  </g>
+  <g class="st5">
+    <text class="st4" transform="translate(593.43 229.28)"><tspan x="0" y="0">Shared infrastructure project</tspan></text>
+  </g>
+  <g class="st5">
+    <text class="st4" transform="translate(607.42 411.63)"><tspan x="0" y="0">Prod environment - production account</tspan></text>
+  </g>
+  <g class="st5">
+    <text class="st4" transform="translate(578 469.57)"><tspan x="0" y="0">Prod infrastructure</tspan></text>
+  </g>
+  <g class="st5">
+    <text class="st4" transform="translate(771.14 469.2)"><tspan x="0" y="0">App onboarding</tspan></text>
+  </g>
+  <g class="st5">
+    <text class="st4" transform="translate(606.83 287)"><tspan x="0" y="0">Dev environment - development account</tspan></text>
+  </g>
+  <g class="st5">
+    <text class="st4" transform="translate(577.41 344.95)"><tspan x="0" y="0">Dev infrastructure</tspan></text>
+  </g>
+  <g class="st5">
+    <text class="st4" transform="translate(770.55 344.57)"><tspan x="0" y="0">App onboarding</tspan></text>
+  </g>
+  <g class="st5">
+    <text class="st4" transform="translate(116.89 233.14)"><tspan x="0" y="0">Application development project</tspan></text>
+  </g>
+  <g class="st5">
+    <text class="st4" transform="translate(130.89 415.48)"><tspan x="0" y="0">Infrastructure onboard - projects in admin account</tspan></text>
+  </g>
+  <g class="st5">
+    <text class="st4" transform="translate(101.47 473.43)"><tspan x="0" y="0">Dev infra onboard</tspan></text>
+  </g>
+  <g class="st5">
+    <text class="st4" transform="translate(294.61 473.05)"><tspan x="0" y="0">Prod infra onboard</tspan></text>
+  </g>
+  <g class="st5">
+    <text class="st4" transform="translate(130.3 290.86)"><tspan x="0" y="0">Network and services - development account</tspan></text>
+  </g>
+  <g class="st5">
+    <text class="st4" transform="translate(100.88 348.8)"><tspan x="0" y="0">Development tools</tspan></text>
+  </g>
+</svg>
