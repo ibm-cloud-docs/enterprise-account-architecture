@@ -207,7 +207,7 @@ The following shows each type of account and its purpose:
 | [Business unit administration](/docs/enterprise-account-architecture?topic=enterprise-account-architecture-about)     | 1-25 | Production BU account groups | Hosts infrastructure as code to manage workload accounts and the workload account's applications and infrastructure. |
 | [Workload](/docs/enterprise-account-architecture?topic=enterprise-account-architecture-about)     | 2-500 | Production and nonproduction and BU account groups| Hosts shared infrastructure for hosting application workloads. Used in pairs |
 | [Infrastructure as code development and test](/docs/enterprise-account-architecture?topic=enterprise-account-architecture-about)      | 1+1 | Nonprod BU account groups | 1 Account to host cloud tools for infrastructure as code development and 1 account for test deployments. |
-| [Backup](/docs/enterprise-account-architecture?topic=enterprise-account-architecture-bcdr)      | 3-51 | Store backup and DR data | 1 for the Admin Account Group + 2 per BU (1 nonprod and 1 prod) |
+| [Backup](/docs/enterprise-account-architecture?topic=enterprise-account-architecture-about#bcdr)      | 3-51 | Store backup and DR data | 1 for the Admin Account Group + 2 per BU (1 nonprod and 1 prod) |
 {: caption="Account purpose" caption-side="bottom"}
 
 Security and Compliance Center Workload Protection (SCC-WP) instances should be deployed in the administration accounts to enable Business Unit-specific compliance policies. This is a change from the previous recommendation for centralized SCC instances. Note that the original Security and Compliance Center will reach end of support on December 15, 2025.
