@@ -653,7 +653,7 @@ Centralizing monitoring can also be used to identify infrastructure consolidatio
 ## Business continuity and disaster recovery
 {: #bcdr}
 
-A holistic strategy for business continuity and disaster recovery is critical when you are managing cloud at scale. This recommendation extends the business continuity recommendations from the [IBM Cloud framework for Financial Services](/docs/framework-financial-services?topic=framework-financial-services-shared-bcdr) and provides some additional specifics that extend the {{site.data.keyword.cloud_notm}} [General disaster recovery strategy](/docs/resiliency?topic=resiliency-understanding-dr#bcdr-general).
+A holistic strategy for business continuity and disaster recovery is critical when you are managing cloud at scale. This recommendation extends the business continuity recommendations from the [IBM Cloud framework for Financial Services](/docs/framework-financial-services?topic=framework-financial-services-shared-bcdr) and provides some additional specifics that extend the {{site.data.keyword.cloud_notm}} [General disaster recovery strategy](/docs/resiliency?topic=resiliency-understanding-dr#bcdr-general-strategy).
 
 Key points from the IBM Cloud Framework for Financial Services:
 
